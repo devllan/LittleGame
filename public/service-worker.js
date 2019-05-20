@@ -60,6 +60,7 @@ self.addEventListener('fetch', (evt) => {
 workbox.routing.registerRoute(
   new RegExp('.*\.js'),
   new workbox.strategies.NetworkFirst({
+	networkTimeoutSeconds: 5,
     // Use a custom cache name.
     cacheName: 'js-cache',
   })

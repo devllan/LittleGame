@@ -256,5 +256,16 @@ function init() {
   document.getElementById('butDialogAdd')
       .addEventListener('click', addLocation);
 }
+function setupCache(){
+	async function addToCache(urls) {
+	  const myCache = await window.caches.open('my-cache');
+	  await myCache.addAll(urls);
+	}
 
+	// Call addToCache whenever you'd like. E.g. to add to cache after a page load:
+	window.addEventListener('load', () => {
+	  // ...determine the list of related URLs for the current page...
+	  addToCache(['/static/relatedUrl1', '/static/relatedUrl2']);
+	});
+}
 //init();
