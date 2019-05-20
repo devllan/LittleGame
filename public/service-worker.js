@@ -17,7 +17,6 @@
  */
 'use strict';
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js');
-workbox.googleAnalytics.initialize();
 
 
 if (workbox) {
@@ -26,6 +25,7 @@ if (workbox) {
   console.log(`Boo! Workbox didn't load 😬`);
 }
 workbox.setConfig({ debug: true });
+workbox.googleAnalytics.initialize();
 
 workbox.core.setCacheNameDetails({
   prefix: 'my-app',
