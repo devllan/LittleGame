@@ -1,0 +1,5 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target" : { "namespace": "android_app", "package_name": "xyz.getmini.translator",
+               "sha256_cert_fingerprints": ["0E:64:59:B4:91:34:5B:92:E2:FB:DE:51:74:8D:4F:AE:3E:54:AD:AE:B8:9D:1E:27:42:D0:07:81:20:24:08:00"] }
+}]
