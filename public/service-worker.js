@@ -59,7 +59,10 @@ self.addEventListener('fetch', (evt) => {
 
 workbox.routing.registerRoute(
   new RegExp('.*\.js'),
-  new workbox.strategies.NetworkFirst()
+  new workbox.strategies.NetworkFirst({
+    // Use a custom cache name.
+    cacheName: 'js-cache',
+  })
 );
 workbox.routing.registerRoute(
   // Cache CSS files.
