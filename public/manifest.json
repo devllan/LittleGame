@@ -1,0 +1,22 @@
+{
+  "short_name": "IExplorer",
+  "name": "Progressive web",
+  "icons": [
+    {
+      "src": "/images/icons/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/icons/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/index.html?source=pwa",
+  "background_color": "#3367D6",
+  "display": "standalone",
+  "orientation": "landscape",
+  "scope": "/",
+  "theme_color": "#3367D6"
+}

@@ -26,6 +26,7 @@
   <meta name="codelab" content="your-first-pwa-v3">
   <link rel="stylesheet" type="text/css" href="/styles/inline.css">
   <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+  <link rel="manifest" href="/manifest.json">
 
   <!-- CODELAB: Add link rel manifest -->
   <!-- CODELAB: Add iOS meta tags and icons -->
@@ -204,6 +205,15 @@
   <!-- CODELAB: Add the install script here -->
   <script>
     // CODELAB: Register service worker.
+	if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }).catch(function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  }
   </script>
 
 </body>
