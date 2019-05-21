@@ -76,11 +76,11 @@ workbox.routing.registerRoute(
 );
 workbox.routing.registerRoute(
   // Cache image files.
-  /\.(?:png|jpg|jpeg|svg|gif)$/,
+  /\.(?:png|jpg|jpeg|svg|gif|ogg|mp3)$/,
   // Use the cache if it's available.
   new workbox.strategies.CacheFirst({
     // Use a custom cache name.
-    cacheName: 'image-cache',
+    cacheName: 'media-cache',
     plugins: [
       new workbox.expiration.Plugin({
         // Cache only 20 images.
