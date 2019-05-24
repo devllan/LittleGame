@@ -21,7 +21,7 @@ setInterval(function(){
     gtag('event', 'auto_engagement', {
         non_interaction: true
     });
-}, 10000);
+}, 30000);
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
         // Registration was successful

@@ -59,7 +59,7 @@ self.addEventListener('fetch', (evt) => {
 
 workbox.routing.registerRoute(
   new RegExp('.*\.js'),
-  new workbox.strategies.NetworkFirst({
+  new workbox.strategies.CacheFirst({
 	networkTimeoutSeconds: 5,
     // Use a custom cache name.
     cacheName: 'js-cache',
@@ -69,7 +69,7 @@ workbox.routing.registerRoute(
   // Cache CSS files.
   /\.css$/,
   // Use cache but update in the background.
-  new workbox.strategies.StaleWhileRevalidate({
+  new workbox.strategies.CacheFirst({
     // Use a custom cache name.
     cacheName: 'css-cache',
   })
