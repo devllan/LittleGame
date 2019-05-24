@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Air Ads</title>
+		<link type="image/x-icon" href="img/favicon.ico" rel="icon" />
+		<link type="image/x-icon" href="img/favicon.ico" rel="shortcut icon" />
+		<link rel="stylesheet" type="text/css" href="css/global.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+        <!–[if !IE]><!–>
+            <style>
+                .container{min-width : 1630px;}
+            </style>
+        <!–<![endif]–>
+		<script src="js/isMobile.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+        <script>
+            if( isMobile() ){
+                var oMeta = document.createElement('meta');
+                oMeta.name = 'viewport';
+                oMeta.content = 'user-scalable=no';
+                document.getElementsByTagName('head')[0].appendChild(oMeta);
+            }
+
+            _zoom();
+            $(window).resize(function(){
+                _zoom();
+            });
+            function _zoom(){
+                var _zoom = $(window).width()/1920;
+                $("html").css('zoom',_zoom);
+
+            }
+        </script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="banner">
+				<a class="logo fl" href="index.html" target="_blank"><img src="img/logo.png"/></a>
+			
+			</div>
+			<div class="main">
+				<!--header-->
+				<div class="header">
+					<div class="header-word">
+						<h3 class="header-tit bounceInRight">Mobile Marketing Automation</h3>
+						<span class="line"></span>
+						<p class="animated bounceInUp">
+							whether you're a publisher or advertiser,<br />
+							Air Ads is the best option to reach new consumers on<br />
+							mobile at massive scale.
+						</p>
+					</div>
+				</div>
+				
+				<!--advertisers && publishers-->
+				<div class="adv-pub-wrap">
+					<div class="adv-pub">
+						<div class="adv-wrap fl">
+							<h3>ADVERTISERS</h3>
+							<p>Reach millions of quality users globally.</p>
+							<a class="adv-link" href="#"></a>
+						</div>
+						<span class="adv-line fl"></span>
+						<div class="pub-wrap fl">
+							<h3>PUBLISHERS</h3>
+							<p>Earn highest eCPM - make money today!</p>
+							<a class="adv-link" href="#"></a>
+						</div>
+					</div>
+				</div>
+				
+				<!--Focus games-->
+				<div class="game-wrap">
+					<div class="game">
+						<h3 class="game-tit">
+							Bulldogcpi Focus on the global app<br/>traffic especially casual games
+						</h3>
+						<span class="line"></span>
+						<div id="game-info" class="game-info">
+							<div class="item item1">
+								<span class="bg"></span>
+								<span class="shadow"></span>
+								<p class="word bounceInDown">Directed to the advertisement page instead of your website.Make it much easier.</p>
+								<a class="game-link" href="#"></a>
+							</div>
+							<div class="item item2">
+								<span class="bg"></span>
+								<span class="shadow"></span>
+								<p class="word bounceInDown">Ads in all sorts of ways . Catch the user’s eye and earn highest ECPM.</p>
+								<a class="game-link" href="#"></a>
+							</div>
+							<div class="item item3">
+								<span class="bg"></span>
+								<span class="shadow"></span>
+								<p class="word bounceInDown">Best converting offers from global apps for you.</p>
+								<a class="game-link" href="#"></a>
+							</div>
+							<div class="item item4">
+								<span class="bg"></span>
+								<span class="shadow"></span>
+								<p class="word bounceInDown">Rewarded Offer Walls.Acquire users from our innovative advertising platform and expect high conversion rates.</p>
+								<a class="game-link" href="#"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- ad impression -->
+				<div id="impres-wrap" class="impres-wrap">
+					<h4 class="impres-tit">AD IMPRESSION</h4>
+					<ul class="impres-list">
+						<li class="clear">
+							<div class="wrap">
+								<a class="link" href="#" target="_blank"></a>
+								<div class="mobile">
+									<span class="bar bot"></span>
+								</div>
+								<div class="mobile">
+									<span class="bar"></span>
+								</div>
+								<p class="word">BANNER ADS</p>
+							</div>
+						</li>
+						<li class="clear">
+							<div class="wrap">
+								<a class="link" href="#" target="_blank"></a>
+								<div class="mobile">
+									<div class="mobile-con">
+										<span class="close"></span>
+										<div class="mountain"></div>
+										<a href="javascript:;" class="play-fade"></a>
+									</div>
+								</div>
+								<div class="mobile">
+									<div class="mobile-con ads" data-animate="bounceInDown">
+										<span class="close"></span>
+										<div class="scroll top left"><ul></ul></div>
+										<div class="scroll bot right"><ul></ul></div>
+										<a href="javascript:;" class="play"></a>
+									</div>
+								</div>
+								<div class="mobile">
+									<div class="mobile-con" data-animate="bounceInUpSelf">
+										<span class="close"></span>
+										<div class="scroll top left"><ul></ul></div>
+										<div class="scroll bot right"><ul></ul></div>
+										<div class="scroll-img"><span class="down"></span><ul></ul></div>
+										<a href="javascript:;" class="play"></a>
+									</div>
+								</div>
+								<p class="word">SPLASH ADS</p>
+							</div>
+						</li>
+						<li class="clear">
+							<div class="wrap">
+								<a class="link" href="#" target="_blank"></a>
+								<div class="mobile">
+									<div class="mobile-con art">
+										<span class="close"></span>
+										<div class="mountain"></div>
+										<a href="javascript:;" class="play play-down-fade"></a>
+									</div>
+									<div class="article"></div>
+								</div>
+								<div class="mobile">
+									<div class="mobile-con art">
+										<span class="close"></span>
+										<div class="scroll top left"><ul></ul></div>
+										<div class="scroll bot right"><ul></ul></div>
+										<a href="javascript:;" class="play play-down-fade"></a>
+									</div>
+									<div class="article"></div>
+								</div>
+								<div class="mobile">
+									<div id="gameover" class="mobile-con over">
+										<span class="close"></span>
+										<div class="scroll-img"><ul></ul></div>
+									</div>
+								</div>
+								<div class="mobile video">
+									<div class="video-con">
+										<div class="video" id="video">
+											<div class="item">
+												<span class="item1"></span>
+												<span class="item2"></span>
+												<span class="item3"></span>
+											</div>
+											<div class="item">
+												<span class="item1"></span>
+												<span class="item2"></span>
+												<span class="item3"></span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<p class="word">INTERSTITIALS</p>
+							</div>
+						</li>
+						<li class="offer clear">
+							<div id="offer" class="wrap">
+								<a class="link" href="#" target="_blank"></a>
+								<div class="mobile">
+									<div class="mobile-con no-fade">
+										<span class="close"></span>
+										<div class="offer-wrap">
+											<ul class="offer-list">
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<p class="word">OFFER WALL</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				
+				<!--advertisers && publishers-->
+				<div class="adv-pub-wrap">
+					<div class="adv-pub">
+						<div class="adv-wrap fl">
+							<h3>ADVERTISERS</h3>
+							<p>Reach millions of quality users globally.</p>
+							<a class="adv-link" href="#"></a>
+						</div>
+						<span class="adv-line fl"></span>
+						<div class="pub-wrap fl">
+							<h3>PUBLISHERS</h3>
+							<p>Earn highest eCPM - make money today!</p>
+							<a class="adv-link" href="#"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<div class="foot-con">
+					<span class="fl">©2019 Air Ads</span>
+					<span style="border-right: none;">progressive-web@web.app</span>
+				</div>
+			</div>
+		</div>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
