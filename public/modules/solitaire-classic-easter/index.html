@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Solitaire Classic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="SolitaireClassic">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="js/common.js"></script>
+
+    <script>
+        window.famobi_theme = "easter/";
+
+        ////injet start
+        window.famobi = {
+            getOrientation: function(){
+                var orientation = '';
+                if (window.innerHeight != window.innerWidth) {
+                    orientation = window.matchMedia('(orientation: portrait)').matches ? 'portrait' : 'landscape';
+                }
+                return orientation;
+            },
+            onOrientationChange: function(){
+                if (typeof callback !== 'function') {
+                    this.error('famobi.onorientationchange: no valid callback provided.');
+                }
+                return faZepto(window).resize(callback);
+            },
+            getWindowSize: function(){
+                return {"w": window.innerWidth, "h": window.innerHeight};
+            }
+        };
+        window.famobi.showAd = function(cb){
+            console.debug("inject showAd");
+            setTimeout(cb, 1);
+        };
+        window.famobi.getMoreGamesButtonImage = function(){
+            console.debug("inject getMoreGamesButtonImage");
+            return "libs/assets/moregamebtn.png";
+        };
+        window.famobi.__ = function(str){
+            console.debug("inject famobi.__");
+            return str;
+        };
+        window.famobi.moreGamesLink = function(){
+            console.debug("inject moreGamesLink");
+        };
+        window.famobi.getOrientation = function(){
+
+        }
+        window.famobi_analytics = {};
+        window.famobi_analytics.trackEvent = function(){
+            console.debug("inject trackEvent");
+        };
+        window.famobi_analytics.trackScreen = function(){
+            console.debug("inject trackScreen");
+        };
+
+        // Package-ID
+        window.famobi_gameID = "solitaire-classic-easter";
+        window.famobi_gameJS = ['js/pixi.js', 'js/all_formatted.js',
+            function(){
+                window.famobi_onload();
+            }
+        ];
+        //
+        // (function (document, url, fgJS, firstJS) {
+        //         fgJS = document.createElement('script');
+        //         firstJS = document.getElementsByTagName('script')[0];
+        //         fgJS.src = url + encodeURIComponent(document.location.href);
+        //         firstJS.parentNode.insertBefore(fgJS, firstJS);
+        // })(document, '../../gameapi/v1.js?e=');
+    </script>
+<script src="js/pixi.js"></script>
+<script src="js/all_formatted.js"></script>
+<!--<script src="../../gameapi/api.js"></script>-->
+<script >
+    famobi_onload();
+</script>
+</head>
+<body>
+    <div id="canvas-wrapper">
+        <span id="gameContainer"></span>
+    </div>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-101623151-11"></script>
+    <script src="../common/common.js"></script>
+</body>
+</html>

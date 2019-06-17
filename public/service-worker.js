@@ -76,7 +76,7 @@ workbox.routing.registerRoute(
 );
 workbox.routing.registerRoute(
   // Cache image files.
-  /\.(?:png|jpg|jpeg|svg|gif|ogg|mp3)$/,
+  /\.(?:png|jpg|jpeg|svg|gif|ogg|mp3|json|otf|ico)$/,
   // Use the cache if it's available.
   new workbox.strategies.CacheFirst({
     // Use a custom cache name.
