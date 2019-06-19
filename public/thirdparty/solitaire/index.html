@@ -1,130 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Air Translator Explorer</title>
-  <meta name="Description" content="Air Translator mini site.">
-  <meta name="theme-color" content="#0099FF">
-  <link rel="icon" sizes="192x192" href="/images/icons/icon-192x192.png">
-  <link rel="apple-touch-icon" href="/images/icons/icon-192x192.png">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Translator Explorer</title>
+    <meta name="Description" content="Solitaire Collection">
+    <meta name="theme-color" content="#0099FF">
+    <link rel="icon" sizes="192x192" href="/images/icons/icon-192x192.png">
+    <link rel="apple-touch-icon" href="/images/icons/icon-192x192.png">
 
-  <!-- <link rel="stylesheet" type="text/css" href="/styles/inline.css"> -->
-  <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
-  <link rel="manifest" href="/manifest.json">
-  <link rel="stylesheet" href="styles/material.blue-red.min.css">
-	<style>
-	.mdl-card {
-		min-height: auto !important;
-		position: relative;
-	}
-	div.sponsor{
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 100%;
-		text-align: center;
-	}
-	div.sponsor p{
-	    font-size: 8px;
-	    background-color: #EAEAEA;
-	    position: absolute;
-	    right: 0;
-	    top: 0;
-	}
-	div.sponsor p a{
-		text-decoration: none;
-	    color: #03AECC;
-	    padding: 0 0.5em;
-	}
-	.wod-card {
-	    display: flex;
-		flex-direction: row;
-		padding: 0.5em;
-	}
-	.wod-calendar{
-		min-width: 4em;
-		font-size: 10px;
-		text-align: center;
-		font-weight: 700;
-	}
-	.wod-content{
-	}
-	.wod-calendar-month{
-		background-color: #e36056;
-		color: #ffffff;
-		border-top: 1px solid transparent;
-		border-top-left-radius: 5px;
-		border-top-right-radius: 5px;
-	}
-	.wod-calendar-day{
-		font-size: 16px;
-		height: 20px;
-		line-height: 20px;
-		padding: 3px 0;
-		background-color: #fafae2;
-		color: #000000;
-		border-bottom: 1px solid transparent;
-		border-bottom-left-radius: 5px;
-		border-bottom-right-radius: 5px;
-	}
-	.wod-content{
-		margin-left: 8px;
-		font-size: 12px;
-	}
-	.wod-content-word a{
-		color: #4389c7;
-		text-decoration: none;
-		line-height: 2em;
-	}
-	.wod-content-translation{
-		color: #000000;
-		line-height: 2em;
-	}
-	.wod-content-examples{
-		margin-top: 10px;
-	}
-	.wod-content-examples-intro, .wod-examples-lang2{
-		color: grey;
-	}
-	.wod-content-examples-items{
-		margin: 0;
-		padding: 0 1em;
-	}
-	</style>
-	<script type="text/template" id="template-cardlist">
-		<card-list>{{#items}}
-			<div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card"><a style="display: block;" href="{{link}}" target="_blank">
-			<div class="card-bg"><img src="{{img}}" style="width: 100%"></div>
-			</a></div>
-		{{/items}}
-		</card-list>
-	</script>
-	<script type="text/template" id="template-wordoftheday">
-		<section class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card wod-card">
-		  <div class="wod-calendar">
-			  <div class="wod-calendar-month">{{month}}</div>
-			  <div class="wod-calendar-day">{{day}}</div>
-		  </div>
-		  <div class="wod-content">
-			<div class="wod-content-word"><a href="{{link}}" target="_blank">{{source}}</a></div>
-			<div class="wod-content-translation">{{translation}}</div>
-			<div class="wod-content-examples">
-				<div class="wod-content-examples-intro">Examples</div>
-				<ol class="wod-content-examples-items">
-					{{#examples}}
-					<li>
-						<div class="wod-examples-lang1">{{text}}</div>
-						<div class="wod-examples-lang2">{{translation}}</div>
-					</li>{{/examples}}
-				</ol>
-			</div>
-		  </div>
-		  
-		</div>
-		</section>
-	</script>
+    <!-- <link rel="stylesheet" type="text/css" href="/styles/inline.css"> -->
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="styles/material.blue-red.min.css">
+    <style>
+        .mdl-card {
+            min-height: auto !important;
+            position: relative;
+        }
+
+        div.sponsor {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        div.sponsor p {
+            font-size: 8px;
+            background-color: #EAEAEA;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        div.sponsor p a {
+            text-decoration: none;
+            color: #03AECC;
+            padding: 0 0.5em;
+        }
+    </style>
 </head>
 <body>
 <!--
@@ -132,85 +49,60 @@
     <h1>Whant It?</h1>
   </header>
   -->
-  <main>
-  <div class="mdl-layout__container"><div class="mdl-layout">
-<div class="mdl-layout__content">
-<div class="mdl-grid portfolio-max-width">
+<main>
+    <div class="mdl-layout__container">
+        <div class="mdl-layout">
+            <div class="mdl-layout__content">
+                <div class="mdl-grid portfolio-max-width">
+                    <!-- banner for game -->
+                    <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                        <a style="display: block;"
+                           href="https://progressive-web-75c14.firebaseapp.com/modules/solitaire-classic-easter/index.html?utm_source=collection&utm_medium=web"
+                           target="_blank">
+                            <div class="card-bg"><img src="images/solitaire.jpg" alt="Classic" style="width: 100%">
+                            </div>
+                            <div class="sponsor"><p><a
+                                    href="https://progressive-web-75c14.firebaseapp.com/modules/network/index.html"
+                                    target="_blank">✦ Air ADs</a></p></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
 
-	<!-- first position for today -->
-	<div id="wod-of-today" class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card wod-card">
-	  <div class="wod-calendar">
-		  <div class="wod-calendar-month">&nbsp;</div>
-		  <div class="wod-calendar-day">&nbsp;</div>
-	  </div>
-	  <div class="wod-content">
-		<div class="wod-content-word"><span style="background-color: #f5f5f5;">&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
-		<div class="wod-content-translation"><span style="background-color: #f5f5f5;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
-		<div class="wod-content-examples">
-			<div class="wod-content-examples-intro" style="color: #f5f5f5">Examples</div>
-			<ol class="wod-content-examples-items" style="color: #f5f5f5">
-				<li>
-					<div class="wod-examples-lang1"><span style="background-color: #f5f5f5;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
-					<div class="wod-examples-lang2"><span style="background-color: #f5f5f5;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
-				</li>
-			</ol>
-		</div>
-	  </div>
-	  
-	</div>
-	<div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card wod-card">
-		<a href="http://www.bbc.co.uk/learningenglish/english/" style="display: inline-block; width: 100%;text-decoration: none;">
-		  <div class="card-bg" style="background-image:url(https://ichef.bbci.co.uk/images/ic/960xn/p028kvft.jpg);     background-position: left center;height: 5em;     background-size: cover;   width: 100%;"></div>
-		  <span style="color: gray;    padding-top: .5em;    display: inline-block;">Learning English</span></a>
-	</div>
-	
-	<!-- banner for game -->
-  <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card"><a style="display: block;" href="https://progressive-web-75c14.firebaseapp.com/modules/wordconnect/index.html" target="_blank">
-  <div class="card-bg"><img src="images/wordconnect.jpg" alt="game of word connect" style="width: 100%"></div>
-  <div class="sponsor"><p><a href="https://progressive-web-75c14.firebaseapp.com/modules/network/index.html" target="_blank">✦ Air ADs</a></p></div>
-	  <!--<div class="mdl-card__actions mdl-card--border">
-		<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://progressive-web-75c14.firebaseapp.com/modules/wordconnect/index.html">
-		  Get Started
-		</a>
-	  </div>-->
-	</a></div>
-  <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card"><a style="display: block;" href="https://progressive-web-75c14.firebaseapp.com/modules/words-story/index.html" target="_blank">
-  <div class="card-bg"><img src="images/wordstory.jpg" alt="game of word story" style="width: 100%"></div>
-  <div class="sponsor"><p><a href="https://progressive-web-75c14.firebaseapp.com/modules/network/index.html" target="_blank">✦ Air ADs</a></p></div>
-	</a></div>
-	<!-- word of today -->
-	<placeholder id="wod-top5"></placeholder>
-	
-	<!-- end word of today -->
-	<placeholder id="wod-last"></placeholder>
-</div></div></div>
-</div>
-  </main>
-
+<script type="text/javascript">
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+            // Registration was successful
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }).catch(function(err) {
+            // registration failed :(
+            console.log('ServiceWorker registration failed: ', err);
+        });
+    }
+</script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.google-analytics.com/analytics.js"></script>
 <script async src="/scripts/autotrack.js"></script>
 <script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-87398927-3', 'auto');
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', 'UA-101623151-11', 'auto');
 
-// Replace the following lines with the plugins you want to use.
-ga('require', 'eventTracker');
-ga('require', 'outboundLinkTracker');
-ga('require', 'urlChangeTracker');
-ga('require', 'impressionTracker');
-ga('require', 'maxScrollTracker');
-ga('require', 'mediaQueryTracker');
-ga('require', 'pageVisibilityTracker');
-ga('require', 'cleanUrlTracker');
-// ...
+    // Replace the following lines with the plugins you want to use.
+    ga('require', 'eventTracker');
+    ga('require', 'outboundLinkTracker');
+    ga('require', 'urlChangeTracker');
+    ga('require', 'impressionTracker');
+    ga('require', 'maxScrollTracker');
+    ga('require', 'mediaQueryTracker');
+    ga('require', 'pageVisibilityTracker');
+    ga('require', 'cleanUrlTracker');
+    // ...
 
-ga('send', 'pageview');
-
+    ga('send', 'pageview');
 </script>
 
-  <script src="/scripts/handlebars-v4.1.2.js"></script>
-  <script src="/scripts/db.js"></script>
-  <script src="/scripts/app.js"></script>
 </body>
 </html>
