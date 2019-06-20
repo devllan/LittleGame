@@ -1,0 +1,13 @@
+{"frames":[
+{"filename":"bg_popup","frame":{"x":1,"y":1,"w":859,"h":554}},
+{"filename":"bg_popup_game_over","frame":{"x":1,"y":556,"w":705,"h":260}},
+{"filename":"bg_swip","frame":{"x":861,"y":1,"w":55,"h":30}},
+{"filename":"btn_close","frame":{"x":917,"y":1,"w":36,"h":37}},
+{"filename":"btn_close_pushed","frame":{"x":954,"y":1,"w":36,"h":37}},
+{"filename":"button_green","frame":{"x":1,"y":817,"w":354,"h":84}},
+{"filename":"button_green_pushed","frame":{"x":356,"y":817,"w":354,"h":84}},
+{"filename":"check_green","frame":{"x":991,"y":1,"w":26,"h":26}},
+{"filename":"check_grey","frame":{"x":991,"y":28,"w":26,"h":26}},
+{"filename":"bg_dott","frame":{"x":861,"y":32,"w":31,"h":30}},
+{"filename":"btn_options","frame":{"x":861,"y":63,"w":148,"h":148}},
+{"filename":"btn_options_pushed","frame":{"x":861,"y":212,"w":133,"h":133}}]}

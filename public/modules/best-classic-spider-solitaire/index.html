@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <title>Best Classic Spider Solitaire</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="BestClassicSpider">
+    <meta name="game-slug" content="best-classic-spider-solitaire">
+    <meta name="description"
+          content="Best Classic Spider Solitaire brings the popular spider version game of the solitaire card game to the palm of your hand. As with every Solitaire game it is your objective to sort cards onto piles. Each pile can only contain one color and has to consist of all cards starting and start with the king. A card - or a group of cards - can be moved to one of the other columns if the topmost cards value is exactly one lower from the card it&#x2019;s being moved on.
+Play Best Classic Spider Solitaire now for free and enjoy this card game masterpiece!">
+    <meta name="keywords" content>
+    <meta name="game-id" content="951">
+    <meta name="is-cocos-2d" content="false">
+    <meta name="supports-ad-play-button" content="false">
+    <!--<link rel="stylesheet" href="styles.css" type="text/css">-->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="icon_60x60.png">
+    <!--<link rel="apple-touch-icon" sizes="76x76" href="icon_76x76.png">-->
+    <!--<link rel="apple-touch-icon" sizes="120x120" href="icon_120x120.png">-->
+    <!--<link rel="apple-touch-icon" sizes="152x152" href="icon_152x152.png"> -->
+
+    <meta name="locale" content="en">
+    <style type="text/css">
+        @font-face
+        {
+            font-family: TCCEB;
+            src: url(assets/TCCEB.ttf) format('truetype');
+        }
+
+        body
+        {
+            background-color: #003720;
+            margin: 0;
+        }
+
+        #canvas-wrapper
+        {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+        }
+
+        #gameContainer
+        {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+
+
+<div id="canvas-wrapper">
+    <span id="gameContainer"></span>
+</div>
+
+
+<script src="src/fontfaceobserver.js"></script>
+<script src="src/phaser-no-physics.min.js"></script>
+<script src="src/game.js"></script>
+<script type="text/javascript">
+    var sgSettings = {
+        config: {
+            env: {
+                locale: "en"
+            },
+            rewarded: {
+                enabled: false
+            }
+        }
+    };
+    var sdkHandler = {
+        _pool: {},
+        on: function(eventName, handler){
+            if( typeof this._pool[eventName] === 'undefined' ){
+                this._pool[eventName] = [];
+            }
+            console.log("on " + eventName);
+            this._pool[eventName].push( handler );
+        },
+        off: function(eventName, handler){
+            if( this._pool[eventName] ){
+                var idx = this._pool[eventName].indexOf(handler);
+                if( idx > -1 ){
+                    this._pool[eventName].splice(idx, 1);
+                    console.log("off " + eventName);
+                }
+            }
+        },
+        trigger: function(eventName, data, context){
+            console.log("trigger " + eventName);
+            if( this._pool[eventName] ){
+                this._pool[eventName].forEach(function(handler){
+                    handler.call(context, data);
+                })
+            }else{
+                console.log("trigger no handler");
+            }
+        }
+    };
+
+    var gameManager = {
+        startOver: function () {
+            R.sceneTransition(300, 'play');
+        },
+        runGame: function(){
+            R.sceneTransition(300, 'home');
+        },
+        freezeGame: function () {
+            if (game) {
+                previousSoundMuted = game.sound.mute;
+                if (previousSoundMuted = false) game.sound.mute = true;
+                if (game.state.current == "play")
+                    PlayState.setPause(true);
+            }
+        },
+        unfreezeGame: function () {
+            if (game) {
+                if (previousSoundMuted == true)
+                    game.sound.mute = previousSoundMuted;
+                if (game.state.current == "play")
+                    PlayState.setPause(false);
+            }
+        }
+    };
+    sdkHandler.on("loading.completed", function(){
+        gameManager.runGame();
+    });
+    function start2(){
+        document.body.style.backgroundColor = "#003720";
+        game = new Phaser.Game(R.BASE_GAME_WIDTH, R.BASE_GAME_HEIGHT, Phaser.CANVAS, 'gameContainer', BootState);
+
+    }
+    start2();
+</script>
+</body>
+</html>
