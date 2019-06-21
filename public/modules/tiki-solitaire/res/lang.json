@@ -1,0 +1,914 @@
+{  
+   "play_button":[  
+      {  
+         "en":"PLAY",
+         "es":"JUGAR",
+         "de":"SPIELEN",
+         "fr":"JOUER",
+         "it":"GIOCA",
+         "pt":"JOGAR",
+         "ru":"ИГРАТЬ",
+         "tr":"OYNA",
+         "nl":"SPEEL",
+         "ja":"プレイ",
+         "pl":"GRAJ",
+         "ar":"لعب"
+      }
+   ],
+   "p_home":[  
+      {  
+         "en":"Home",
+         "es":"Inicio",
+         "de":"Startbildschirm",
+         "fr":"Maison",
+         "it":"Home",
+         "pt":"Pagina Inicial",
+         "ru":"Домой",
+         "tr":"Ev",
+         "nl":"Startscherm",
+         "ja":"ホーム",
+         "pl":"Strona glowna",
+         "ar":"الصفحة الرئيسية"
+      }
+   ],
+   "p_refresh":[  
+      {  
+         "en":"Refresh",
+         "es":"Actualizar",
+         "de":"Aktualisieren",
+         "fr":"Actualiser",
+         "it":"Aggiorna",
+         "pt":"Atualizar",
+         "ru":"Обновить",
+         "tr":"Yenile",
+         "nl":"Verversen",
+         "ja":"リフレッシュ",
+         "pl":"Odswiez",
+         "ar":"تحديث"
+      }
+   ],
+   "p_sound":[  
+      {  
+         "en":"Sound",
+         "es":"Sonido",
+         "de":"Ton",
+         "fr":"Son",
+         "it":"Audio",
+         "pt":"Som",
+         "ru":"Звук",
+         "tr":"Ses",
+         "nl":"Geluid",
+         "ja":"サウンド",
+         "pl":"Dzwiek",
+         "ar":"الصوت"
+      }
+   ],
+   "p_play":[  
+      {  
+         "en":"Play",
+         "es":"Jugar",
+         "de":"Spielen",
+         "fr":"Jouer",
+         "it":"Gioca",
+         "pt":"Jogar",
+         "ru":"Играть",
+         "tr":"Oyna",
+         "nl":"Speel",
+         "ja":"プレイ",
+         "pl":"Graj",
+         "ar":"لعب"
+      }
+   ],
+   "treasure_time":[  
+      {  
+         "en":"Treasure Time!",
+         "es":"¡iLa hora del tesoro!",
+         "de":"Zeit fur Schatze!",
+         "fr":"Voici le tresor!",
+         "it":"E l'ora del tesoro!",
+         "pt":"Hora do Tesouro!",
+         "ru":"Время сокровищ!",
+         "tr":"Kazanma Zamani!",
+         "nl":"Tijd voor de schat!",
+         "ja":"トレジャータイム！",
+         "pl":"Czas na skarby!",
+         "ar":"وقت الكنز!"
+      }
+   ],
+   "continue":[  
+      {  
+         "en":"CONTINUE",
+         "es":"REANUDAR",
+         "de":"FORTSETZEN",
+         "fr":"CONTINUER",
+         "it":"CONTINUA",
+         "pt":"CONTINUAR",
+         "ru":"ПРОДОЛЖИТЬ",
+         "tr":"DEVAM ET",
+         "nl":"DOORGAAN",
+         "ja":"コンティニュー",
+         "pl":"KONTYNUUJ",
+         "ar":"تهانينا!"
+      }
+   ],
+   "EnhanceYouGame":[  
+      {  
+         "en":"Enhance you game",
+         "es":"Mejora tu juego",
+         "de":"Verbessern Sie Ihr Spiel",
+         "fr":"Ameliorez votre jeu",
+         "it":"Potenzia il tuo gioco",
+         "pt":"Melhore o seu jogo",
+         "ru":"Улучши свою игру",
+         "tr":"Oyununu gelistir",
+         "nl":"Verbeter je spel",
+         "ja":"ゲームを高める",
+         "pl":"Usprawnij gre",
+         "ar":"عزّز لعبتك"
+      }
+   ],
+   "20sec":[  
+      {  
+         "en":"+30 Sec",
+         "es":"+30 seg",
+         "de":"+30 Sek",
+         "fr":"+30 Sec",
+         "it":"+30 Sec",
+         "pt":"+30 Seg",
+         "ru":"+30 сек",
+         "tr":"+30 sn",
+         "nl":"+30 Sec",
+         "ja":"+30秒",
+         "pl":"+30 sek",
+         "ar":"+30 ثانية"
+      }
+   ],
+   "2Joker":[  
+      {  
+         "en":"+2 Joker",
+         "es":"+2 Joker",
+         "de":"+2 Joker",
+         "fr":"+2 joker",
+         "it":"+2 Jolly",
+         "pt":"+2 Joker",
+         "ru":"+2 джок.",
+         "tr":"+2 Joker",
+         "nl":"+2 Joker",
+         "ja":"ジョーカー+2枚",
+         "pl":"+2 Joker",
+         "ar":"+2 جوكر"
+      }
+   ],
+   "2Coins":[  
+      {  
+         "en":"x2",
+         "es":"x2",
+         "de":"x2",
+         "fr":"x2",
+         "it":"x2",
+         "pt":"x2",
+         "ru":"x2",
+         "tr":"x2",
+         "nl":"x2",
+         "ja":"x2",
+         "pl":"x2",
+         "ar":"X2"
+      }
+   ],
+   "Leaderboard":[  
+      {  
+         "en":"Leaderboard",
+         "es":"Tabla de clasificacion",
+         "de":"Rangliste",
+         "fr":"Classement meilleurs",
+         "it":"Classifica giocatori",
+         "pt":"Tabela classificativa",
+         "ru":"Список лидеров",
+         "tr":"Skor Tahtas?",
+         "nl":"Scorebord",
+         "ja":"リーダーボード",
+         "pl":"Tabela wynikow",
+         "ar":"لائحة المتصدرين"
+      }
+   ],
+   "MoreCoins":[  
+      {  
+         "en":"More Coins?",
+         "es":"¿Mas monedas?",
+         "de":"Mehr Munzen?",
+         "fr":"Plus de pieces?",
+         "it":"Piu gettoni?",
+         "pt":"Mais Moedas?",
+         "ru":"Еще монет?",
+         "tr":"Daha çok para?",
+         "nl":"Meer munten?",
+         "ja":"コインが足りない？",
+         "pl":"Wiecej monet?",
+         "ar":"المزيد من العملات المعدنية؟"
+      }
+   ],
+   "MoreCoinsText":[  
+      {  
+         "en":"Watch a video to get free coins!",
+         "es":"¡Mira un video para conseguir monedas gratis!",
+         "de":"Schauen Sie ein Video, um gratis Munzen zu erhalten!",
+         "fr":"Regardez une video pour recevoir des pieces gratuites!",
+         "it":"Guarda un video per ricevere gettoni gratuiti!",
+         "pt":"Assista a um video para obter moedas gratis!",
+         "ru":"Посмотри видео,\nчтобы получить\nбесплатные монеты!",
+         "tr":"Bedava para kazanmak icin videoyu izle!",
+         "nl":"Bekijk een video om gratis munten te krijgen!",
+         "ja":"動画広告を見てコインをもらおう",
+         "pl":"Obejrzyj film, aby zdobyc darmowe monety!",
+         "ar":"مشاهدة فيديو للحصول على النقود مجانا!"
+      }
+   ],
+   "NotenoughcoinsMoreCoinsText":[  
+      {  
+         "en":"Not enough coins. Watch a video to get free coins!",
+         "es":"No tienes suficientes monedas. ¡Mira un video para conseguir monedas gratis!",
+         "de":"Nicht genugend Munzen. Schauen Sie ein Video, um gratis Munzen zu erhalten!",
+         "fr":"Vous n'avez pas assez de pieces. Regardez une video pour recevoir des pieces gratuites!",
+         "it":"Gettoni non sufficienti. Guarda un video per ricevere gettoni gratuiti!",
+         "pt":"Nao tem moedas suficientes. Assista a um video para obter moedas gratis!",
+         "ru":"Недостаточно монет.\nПосмотри видео, чтобы\nполучить бесплатные\nмонеты!",
+         "tr":"Yeterli paran yok. Bedava para kazanmak icin videoyu izle!",
+         "nl":"Niet genoeg munten. Bekijk een video om gratis munten te krijgen!",
+         "ja":"コインが足りない、動画広告を見てコインをもらおう",
+         "pl":"Nie masz tyle monet. Obejrzyj film, aby zdobyc darmowe monety!",
+         "ar":"العملات المعدنية غير كافية. شاهد مقطع فيديو لتحصل على عملات معدنية مجانية!"
+      }
+   ],
+   "Watch":[  
+      {  
+         "en":"WATCH",
+         "es":"VER",
+         "de":"ANSEHEN",
+         "fr":"REGARDER",
+         "it":"GUARDA",
+         "pt":"ASSISTIR",
+         "ru":"СМОТРЕТЬ",
+         "tr":"IZLE",
+         "nl":"KIJKEN",
+         "ja":"見る",
+         "pl":"OBEJRZYJ",
+         "ar":"مشاهدة"
+      }
+   ],
+   "Congrats":[  
+      {  
+         "en":"Congrats!",
+         "es":"¡Enhorabuena!",
+         "de":"Gratulation!",
+         "fr":"Felicitations!",
+         "it":"Congratulazioni!",
+         "pt":"Parabens!",
+         "ru":"Поздравляем!",
+         "tr":"Tebrikler!",
+         "nl":"Gefeliciteerd!",
+         "ja":"おめでとう",
+         "pl":"Gratulacje!",
+         "ar":"تهانينا!"
+      }
+   ],
+   "CongratsText":[  
+      {  
+         "en":"You've got 500 Coins!",
+         "es":"¡Tienes 500 monedas!",
+         "de":"Sie haben 500 Munzen bekommen!",
+         "fr":"Vous avez recu 500 pieces !",
+         "it":"Hai ricevuto 500 gettoni!",
+         "pt":"Tem 500 Moedas!",
+         "ru":"Ты получил(а) 500 монет!",
+         "tr":"500 adet Para Kazandin!",
+         "nl":"Je hebt 500 munten!",
+         "ja":"500コインをゲットした！",
+         "pl":"Otrzymujesz 500 monet!",
+         "ar":"لقد حصلت على 500 عملة معدنية!"
+      }
+   ],
+   "Claim":[  
+      {  
+         "en":"CLAIM",
+         "es":"RECLAMA",
+         "de":"ABHOLEN",
+         "fr":"DEMANDE",
+         "it":"RICHIEDI",
+         "pt":"RECLAMAR",
+         "ru":"ПОЛУЧИТЬ",
+         "tr":"TALEP ET",
+         "nl":"CLAIM",
+         "ja":"もらう",
+         "pl":"ODBIERZ",
+         "ar":"يطالب"
+      }
+   ],
+   "OutOfTime":[  
+      {  
+         "en":"Out of Time!",
+         "es":"¡No queda tiempo!",
+         "de":"Zeit is abgelaufen!",
+         "fr":"Trop tard!",
+         "it":"Tempo scaduto!",
+         "pt":"Sem Tempo!",
+         "ru":"Время вышло!",
+         "tr":"Sure Doldu!",
+         "nl":"Geen tijd meer!",
+         "ja":"時間切れ",
+         "pl":"Koniec czasu!",
+         "ar":"انتهى الوقت!"
+      }
+   ],
+   "Videoget15sec":[  
+      {  
+         "en":"Watch a video to get extra 20 sec.?",
+         "es":"¿Quieres ver un video para obtener 20 seg. extra?",
+         "de":"Wollen Sie ein Video schauen, um extra 20 Sek. zu bekommen?",
+         "fr":"Regarder une video pour avoir 20 sec. supplementaires ?",
+         "it":"Vuoi guardare un video per ricevere 20 secondi extra?",
+         "pt":"Assistir a um video para obter mais 20 seg.?",
+         "ru":"Посмотреть видео, чтобы\nполучить дополнительные\n20 сек.?",
+         "tr":"Ek 20 sn. Kazanmak icin videoyu izlemek ister misin?",
+         "nl":"Een video bekijken om extra 20 sec. te krijgen?",
+         "ja":"動画広告を見て20秒延長する？",
+         "pl":"Obejrzysz film, aby zyskac 20 sekund?",
+         "ar":"هل تريد مشاهدة مقطع فيديو لتحصل على 15 ثانية إضافية؟"
+      }
+   ],
+   "BestScore":[  
+      {  
+         "en":"Best score:",
+         "es":"Mejor puntuacion:",
+         "de":"Bester Score:",
+         "fr":"Meilleur score:",
+         "it":"Miglior punteggio:",
+         "pt":"Melhor pontuacao:",
+         "ru":"Лучший счет:",
+         "tr":"En iyi skor:",
+         "nl":"Beste score:",
+         "ja":"ハイスコア",
+         "pl":"Najlepszy wynik:",
+         "ar":"أفضل نتيجة:"
+      }
+   ],
+   "Score":[  
+      {  
+         "en":"Score:",
+         "es":"Puntuacion:",
+         "de":"Punktzahl:",
+         "fr":"Score:",
+         "it":"Punteggio:",
+         "pt":"Pontuacao:",
+         "ru":"Очки:",
+         "tr":"Skor:",
+         "nl":"Score:",
+         "ja":"スコア",
+         "pl":"Wynik:",
+         "ar":"النتيجة:"
+      }
+   ],
+   "CurrentScore":[  
+      {  
+         "en":"Current score:",
+         "es":"Puntuacion actual:",
+         "de":"Derzeitiger Score:",
+         "fr":"Score actuel:",
+         "it":"Punteggio corrente:",
+         "pt":"Pontuacao atual:",
+         "ru":"Текущий счет:",
+         "tr":"Mevcut skor:",
+         "nl":"Huidige score:",
+         "ja":"今のスコア",
+         "pl":"Biezacy wynik:",
+         "ar":"النتيجة الحالية:"
+      }
+   ],
+   "Coinsget15sec":[  
+      {  
+         "en":"Get extra 20 sec. for 2000 coins?",
+         "es":"¿Quieres obtener 20 seg. extra. por 2000 monedas?",
+         "de":"Extra 20 Sek. fur 2.000 Munzen bekommen?",
+         "fr":"Obtenir 20 sec. supplementaires contre 2 000 pieces?",
+         "it":"Vuoi ricevere 20 secondi extra per 2000 gettoni?",
+         "pt":"Obter 20 seg. extra por 2000 moedas?",
+         "ru":"Получить дополнительно\n20 сек. за 2000 монет?",
+         "tr":"2000 para karsiliginda ek 20 sn. Kazanmak Ister misin?",
+         "nl":"Extra 20 sec. krijgen voor 2000 munten?",
+         "ja":"2000コイン使って20秒延長しますか？",
+         "pl":"Chcesz dodatkowe 20 sek. za 2000 monet?",
+         "ar":"هل تريد الحصول على 15 ثانية إضافية مقابل 2000 عملة معدنية؟"
+      }
+   ],
+   "Ok":[  
+      {  
+         "en":"OK",
+         "es":"Aceptar",
+         "de":"OK",
+         "fr":"OK",
+         "it":"OK",
+         "pt":"OK",
+         "ru":"OK",
+         "tr":"TAMAM",
+         "nl":"OK",
+         "ja":"OK",
+         "pl":"OK",
+         "ar":"حسنا"
+      }
+   ],
+   "Statistics":[  
+      {  
+         "en":"Statistics",
+         "es":"Estadisticas",
+         "de":"Statistik",
+         "fr":"Statistiques",
+         "it":"Statistiche",
+         "pt":"Estatisticas",
+         "ru":"Статистика",
+         "tr":"Istatistikler",
+         "nl":"Statistieken",
+         "ja":"統計",
+         "pl":"Statystyki",
+         "ar":"الإحصاءات"
+      }
+   ],
+   "Replay":[  
+      {  
+         "en":"REPLAY",
+         "es":"REPETIR",
+         "de":"WIEDERHOLUNG",
+         "fr":"REJOUER",
+         "it":"REPLAY",
+         "pt":"REPETICAO",
+         "ru":"ИГРАТЬ СНОВА",
+         "tr":"YENIDEN OYNAT",
+         "nl":"HERHALING",
+         "ja":"リプレイ",
+         "pl":"ZACZNIJ OD NOWA",
+         "ar":"REPLAY"
+      }
+   ],
+   "Completions":[  
+      {  
+         "en":"Completions:",
+         "es":"Completados:",
+         "de":"Vollendet:",
+         "fr":"Achevement:",
+         "it":"Completato:",
+         "pt":"Realizacoes:",
+         "ru":"Прохождения:",
+         "tr":"Tamamlananlar:",
+         "nl":"Voltooiingen:",
+         "ja":"完成",
+         "pl":"Ukonczone:",
+         "ar":"نسبة الإكمال:"
+      }
+   ],
+   "ClearBonus":[  
+      {  
+         "en":"Clear Bonus:",
+         "es":"Bonificacion:",
+         "de":"Bonus:",
+         "fr":"Bonus disponible :",
+         "it":"Bonus ripulisci:",
+         "pt":"Limpar o Bonus:",
+         "ru":"Бонус за очистку:",
+         "tr":"Net Bonus:",
+         "nl":"Wis bonus:",
+         "ja":"クリアボーナス",
+         "pl":"Premia:",
+         "ar":"مكافأة الإكمال:"
+      }
+   ],
+   "Coins":[  
+      {  
+         "en":"Coins:",
+         "es":"Monedas:",
+         "de":"Munzen:",
+         "fr":"Pieces:",
+         "it":"Monete:",
+         "pt":"Moedas:",
+         "ru":"Монеты:",
+         "tr":"Jetonlar:",
+         "nl":"Munten:",
+         "ja":"コイン",
+         "pl":"Monety:",
+         "ar":"عملات معدنية:"
+      }
+   ],
+   "LongestStreak":[  
+      {  
+         "en":"Longest streak:",
+         "es":"Racha mas larga:",
+         "de":"Langste Gewinnstrahne:",
+         "fr":"Meilleure serie gagnante:",
+         "it":"Sequenza piu lunga:",
+         "pt":"Maior sequencia:",
+         "ru":"Самая длинная серия:",
+         "tr":"En Uzun Seri:",
+         "nl":"Langste reeks:",
+         "ja":"最高連続記録",
+         "pl":"Najdluzsza seria:",
+         "ar":"أطول سلسلة ناجحة:"
+      }
+   ],
+   "NewRecord":[  
+      {  
+         "en":"New Record!",
+         "es":"¡Nuevo Record!",
+         "de":"Neuer Rekord!",
+         "fr":"Nouveau Disque!",
+         "it":"Nuovo Record!",
+         "pt":"Nova Gravacao!",
+         "ru":"Новый Рекорд!",
+         "tr":"Yeni Rekor!",
+         "nl":"Nieuw Record!",
+         "ja":"新記録！",
+         "pl":"Nowy Rekord!",
+         "ar":"أفضل نتيجة جديدة"
+      }
+   ],
+   "CallYou":[  
+      {  
+         "en":"How should we call you?",
+         "es":"¿Como deberiamos llamarte?",
+         "de":"Wie sollen wir Sie nennen?",
+         "fr":"Comment pouvons-nous vous appeler?",
+         "it":"Come vuoi che ti chiamiamo?",
+         "pt":"Que nome devemos chamar-lhe?",
+         "ru":"Когда нам называть тебя?",
+         "tr":"Ismin ne olmali?",
+         "nl":"Hoe moeten we je noemen?",
+         "ja":"なんて呼べばいい？",
+         "pl":"Jak mamy Cie nazywac?",
+         "ar":"كيف يمكننا الاتصال بك؟"
+      }
+   ],
+   "ie":[  
+      {  
+         "en":"i.e. Marlene",
+         "es":"por ej., Marlene",
+         "de":"Z.B. Marelene",
+         "fr":"Par exemple : Marlene",
+         "it":"Es. Marlene",
+         "pt":"ou seja, Marlene",
+         "ru":"например, Марлен",
+         "tr":"or. Marlene",
+         "nl":"bijv. Marleen",
+         "ja":"例えば太郎？",
+         "pl":"np. Marzena",
+         "ar":"مثل: أحمد"
+      }
+   ],
+   "addgift":[  
+      {  
+         "en":"Add gift!",
+         "es":"¡Anade un regalo!",
+         "de":"Geschenk hinzufugen!",
+         "fr":"Ajouter un cadeau !",
+         "it":"Aggiungi regalo!",
+         "pt":"Adicionar um presente!",
+         "ru":"Добавить подарок!",
+         "tr":"Odul ekle!",
+         "nl":"Voeg cadeau toe!",
+         "ja":"追加ギフト",
+         "pl":"Dodaj nagrode!",
+         "ar":"إضافة هدية!"
+      }
+   ],
+   "freebooster":[  
+      {  
+         "en":"You've got Free Booster!",
+         "es":"¡Tienes un potenciador gratis!",
+         "de":"Sie haben einen gratis Booster bekommen!",
+         "fr":"Vous avez recu un booster gratuit!",
+         "it":"Hai ricevuto un booster gratuito!",
+         "pt":"Tem um Reforco Gratis!",
+         "ru":"Получен бесплатный\nускоритель!",
+         "tr":"Bedava Yukseltici kazandin!",
+         "nl":"Je hebt een Gratis Booster!",
+         "ja":"ブースターを手に入れたよ！",
+         "pl":"Otrzymujesz darmowe Doladowanie!",
+         "ar":"لقد حصلت على مسرّع مجاني!"
+      }
+   ],
+   "freecoins":[  
+      {  
+         "en":"You've got Coins!",
+         "es":"¡Tienes monedas!",
+         "de":"Sie haben Munzen bekommen!",
+         "fr":"Vous avez recu des pieces!",
+         "it":"Hai ricevuto dei gettoni!",
+         "pt":"Tem Moedas!",
+         "ru":"Получены монеты!",
+         "tr":"Paralar kazandin!",
+         "nl":"Je hebt Munten!",
+         "ja":"コインをゲットしたよ!",
+         "pl":"Otrzymujesz monety!",
+         "ar":"لقد حصلت على عملات معدنية!"
+      }
+   ],
+   "Free":[  
+      {  
+         "en":"Free",
+         "es":"Free",
+         "de":"Free",
+         "fr":"Free",
+         "it":"Free",
+         "pt":"Free",
+         "ru":"бесп.",
+         "tr":"Free",
+         "nl":"Free",
+         "ja":"フリー",
+         "pl":"Free",
+         "ar":"حر"
+      }
+   ],
+   "Freegift":[  
+      {  
+         "en":"Free gift!",
+         "es":"¡Regalo!",
+         "de":"Geschenk!",
+         "fr":"Surprise!",
+         "it":"Regalo!",
+         "pt":"Presente!",
+         "ru":"Подарок!",
+         "tr":"Odul!",
+         "nl":"Cadeau!",
+         "ja":"フリーギフト",
+         "pl":"Prezent!",
+         "ar":"هدية مجانية!"
+      }
+   ],
+   "Place":[  
+      {  
+         "en":" place",
+         "es":" lugar",
+         "de":" Platz",
+         "fr":" endroit",
+         "it":" pos.",
+         "pt":" colocar",
+         "ru":" место",
+         "tr":" sira",
+         "nl":" plaats",
+         "ja":"場所",
+         "pl":" umiesc",
+         "ar":"المركز"
+      }
+   ],
+   "notificaitons1":[  
+      {  
+         "en":" multiplier!",
+         "es":" ¡multiplicador!",
+         "de":" multiplikator!",
+         "fr":" multiplicateur!",
+         "it":" moltiplicatore!",
+         "pt":" multiplicador!",
+         "ru":" множитель!",
+         "tr":" cogaltici!",
+         "nl":" vermenigvuldiger!",
+         "ja":"マルチプライヤー！",
+         "pl":" mnoznik!",
+         "ar":"مضاعف!"
+      }
+   ],
+   "notificaitons2":[  
+      {  
+         "en":"Treasure Time!",
+         "es":"¡La hora del tesoro!",
+         "de":"Zeit fur Schatze!",
+         "fr":"Voici le tresor!",
+         "it":"E l'ora del tesoro!",
+         "pt":"Hora do Tesouro!",
+         "ru":"Время сокровищ!",
+         "tr":"Kazanma Zamani!",
+         "nl":"Tijd voor de schat!",
+         "ja":"トレジャータイム！",
+         "pl":"Czas na skarby!",
+         "ar":"كنز الوقت!"
+      }
+   ],
+   "notificaitons3":[  
+      {  
+         "en":"Slot open!",
+         "es":"¡Ranura abierta!",
+         "de":"Slot verfugbar!",
+         "fr":"Pile deverouillee!",
+         "it":"Posizione aperta!",
+         "pt":"Slot aberta!",
+         "ru":"Слот открыт!",
+         "tr":"Makine acik!",
+         "nl":"Slot open!",
+         "ja":"スロットオープン！",
+         "pl":"Wolne miejsce!",
+         "ar":"السلوت مفتوح!"
+      }
+   ],
+   "notificaitons4":[  
+      {  
+         "en":"Three of a kind bonus!",
+         "es":"¡Trio de bonificaciones!",
+         "de":"Bonus fur einen Drilling!",
+         "fr":"Bonus trois en leur genre!",
+         "it":"Bonus tris!",
+         "pt":"Bonus tres iguais!",
+         "ru":"Бонус за три одинаковых!",
+         "tr":"Uc adet ayni tur bonus!",
+         "nl":"Three of a kind bonus!",
+         "ja":"スリーオブアカインドボーナス！",
+         "pl":"Premia za trojke!",
+         "ar":"ثلاث أنواع من المكافآت!"
+      }
+   ],
+   "notificaitons5":[  
+      {  
+         "en":"Clear!",
+         "es":"¡Borrar!",
+         "de":"Fertig!",
+         "fr":"Libre!",
+         "it":"Ripulisci!",
+         "pt":"Limpar!",
+         "ru":"Чисто!",
+         "tr":"Temizle!",
+         "nl":"Wegspelen!",
+         "ja":"クリア！",
+         "pl":"Wyczyszczone!",
+         "ar":"أكملت اللعبة!"
+      }
+   ],
+   "notificaitons6":[  
+      {  
+         "en":"Royal Family Bonus!",
+         "es":"¡Bonificacion de Familia Real!",
+         "de":"Koniglicher Bonus!",
+         "fr":"Bonus famille royale!",
+         "it":"Bonus famiglia reale!",
+         "pt":"Bonus Familia Real!",
+         "ru":"Бонус королевской семьи!",
+         "tr":"Kraliyet Ailesi Bonusu!",
+         "nl":"Royal Family Bonus!",
+         "ja":"ロイヤルファミリーボーナス！",
+         "pl":"Premia za rodzine krolewska!",
+         "ar":"مكافأة العائلة الملكية!"
+      }
+   ],
+   "extratime":[  
+      {  
+         "en":"Extra Time!",
+         "es":"¡Tiempo extra!",
+         "de":"Extrazeit!",
+         "fr":"Temps supplementaire!",
+         "it":"Tempo extra!",
+         "pt":"Tempo Extra!",
+         "ru":"Дополнительное время!",
+         "tr":"Ek Zaman!",
+         "nl":"Extra Tijd!",
+         "ja":"エクストラタイム！",
+         "pl":"Dodatkowy czas!",
+         "ar":"وقت إضافي!"
+      }
+   ],
+   "tutorial1":[  
+      {  
+         "en":"Tap consecutive cards HIGHER or LOWER\nthan the build pile.\nColor and suits don't matter.",
+         "es":"Toca cartas consecutivas MAYORES o MENORES\nque el monton de cartas.\nLos simbolos y el color no importan.",
+         "de":"Klicken Sie auf HOHERE oder NIEDRIGERE Karten\nals auf dem Stapel.\nZahl und Farbe sind nicht von Bedeutung.",
+         "fr":"Touchez des cartes qui se suivent par ordre CROISSANT ou DECROSSANT\npar rapport a celle qui se trouve sur le tas.\nLa couleur n'est pas importante.",
+         "it":"Fai tap sulle carte con numero consecutivo SUPERIORE o INFERIORE\nalla carta della pila.\nSemi e colori non contano.",
+         "pt":"Toque em cartas consecutivas MAIS ALTAS ou MAIS BAIXAS\ndo que o monte acumulado.\nOs naipes e a cor nao importam.",
+         "ru":"Нажми на карты подряд ВЫШЕ или НИЖЕ\nсобираемой стопки.\nМасть и цвет не имеют значения.",
+         "tr":"Pes pesen gelen kartlari olusturulmus yigina kiyasla DAHA YUKSEK ya da DAHA DUSUK \nolarak belirle.\nDest ve renk fark etmez.",
+         "nl":"Tik op opeenvolgende kaarten HOGER of LAGER\nvervolgens de bouwstapel.\nKleuren doen er niet toe.",
+         "ja":"次に大きいか小さいカードをタップ、\n色や形は関係ないよ。",
+         "pl":"Wybieraj kolejne karty, WYZSZE lub NIZSZE\nod tych na stosie.\nKolory nie maja znaczenia.",
+         "ar":"انقر على البطاقات المتتابعة سواء كانت أكبر أو أصغر\nحتى تتراكم البطاقات فوق بعضها.\nالشكل واللون غير مهمين."
+      }
+   ],
+   "tutorial2":[  
+      {  
+         "en":"Now try the 6!",
+         "es":"¡Ahora prueba con el 6!",
+         "de":"Versuchen Sie jetzt die 6!",
+         "fr":"Essayez maintenant le n° 6!",
+         "it":"Ora prova il 6!",
+         "pt":"Agora tente o 6!",
+         "ru":"Теперь попробуй 6!",
+         "tr":"Ve 6'yi dene!",
+         "nl":"Probeer nu de 6!",
+         "ja":"さあ6を置いてみよう！",
+         "pl":"Teraz zagraj 6!",
+         "ar":"والآن جرّب البطاقة رقم 6!"
+      }
+   ],
+   "tutorial3":[  
+      {  
+         "en":"NICE!\nNow try going LOWER than the 6.",
+         "es":"¡BIEN!\nAhora prueba con una carta MENOR que 6.",
+         "de":"GUT!\nVersuchen Sie jetzt NIEDRIGER als die 6 zu kommen.",
+         "fr":"BIEN!\nEssayez maintenant d'arriver PLUS BAS que le n° 6.",
+         "it":"BRAVO!\nOra prova una carta con un numero inferiore del 6.",
+         "pt":"BOA!\nAgora tente ir MAIS BAIXO do que o 6.",
+         "ru":"ХОРОШО!\nТеперь попробуй спуститься НИЖЕ 6.",
+         "tr":"GUZEL!\nSimdi 6'dan daha dusuk olanlari dene.",
+         "nl":"GOED!\nProbeer nu LAGER te gaan dan de 6.",
+         "ja":"いいぞ！\n次は6より下だ",
+         "pl":"DOBRZE!\nSprobuj zagrac karte NIZSZA od 6.",
+         "ar":"جيد!\nالآن جرّب رقما أقل من 6."
+      }
+   ],
+   "tutorial4":[  
+      {  
+         "en":"You made a 3-CARD RUN!\nYou don't have any more moves for now.\nDraw a card from the deck.",
+         "es":"¡Has hecho una ESCALERA DE 3 CARTAS!\nNo te quedan jugadas por ahora.\nCoge una carta de la baraja.",
+         "de":"Sie haben einen 3-KARTEN-ERFOLGSLAUF!\nKein weiterer Zug ist moglich zurzeit.\nZiehen Sie eine Karte vom Stapel.",
+         "fr":"Vous avez obtenu une serie de 3 cartes !\nIl n'y a plus aucunune combinaison possible pour le moment.\nPrenez une carte du jeu.",
+         "it":"Hai creato una SEQUENZA di 3 CARTE!\nPer ora non hai piu mosse a disposizione.\nprendi una carta dal mazzo.",
+         "pt":"Fez um 3-CARD RUN!\nNao tem mais jogadas por agora.\nTire uma carta do baralho.",
+         "ru":"Ты РАЗДАЛ(А) 3 КАРТЫ!\nУ тебя больше нет ходов.\nТяни карту из колоды.",
+         "tr":"3'lu KART SERISI yaptin!\nDaha fazla hamlen kalmadi.\nDesteden bir kart cek.",
+         "nl":"Je hebt 3-KAARTEN VERPLAATST!\nJe kunt voorlopig geen kaarten meer verplaatsen.\nTrek een kaart uit de stapel.",
+         "ja":"3カードランを作ったね！\nもうおけるカードがないや！\nドローしよう！",
+         "pl":"Udalo sie uzyskac TROJKE!\nNa razie nie masz wiecej ruchow.\nWez karte z talii.",
+         "ar":"تحتاج إلى بطاقة رقم 3!\nليس لديك أي حركات إضافية الآن.\nاسحب بطاقة من مجموعة البطاقات المقلوبة."
+      }
+   ],
+   "tutorial5":[  
+      {  
+         "en":"GREAT!\nDo you see any cards you can play on the 2?",
+         "es":"¡FANTASTICO!\n¿Ves cartas que puedes jugar en el 2?",
+         "de":"GROSSARTIG!\nSehen Sie eine Karte, die Sie auf die 2 spielen konnen?",
+         "fr":"SUPER!\nVoyez-vous une carte a placer sur le 2?",
+         "it":"OTTIMO!\nVedi qualche carta che puoi posizionare sul 2?",
+         "pt":"EXCELENTE!\nVe algumas cartas que possa jogar no 2",
+         "ru":"ОТЛИЧНО!\nТы видишь какие-либо карты, которыми можешь сыграть на 2?",
+         "tr":"HARIKA!\n2'ye oynayabilecegin bir kart goruyor musun?",
+         "nl":"MOOI!\nZie je kaarten die je kunt spelen op de 2?",
+         "ja":"すごい!\n2に乗せられるカードをみつけられるかな？",
+         "pl":"SWIETNIE!\nCzy widzisz jakies karty, ktore mozna zagrac na 2?",
+         "ar":"رائع!\nهل ترى أي بطاقات يمكن أن تلعبها فوق البطاقة رقم 2؟"
+      }
+   ],
+   "tutorial6":[  
+      {  
+         "en":"Keep going!",
+         "es":"¡Sigue asi!",
+         "de":"Weiter so!",
+         "fr":"Continuez comme ca!",
+         "it":"Continua cosi!",
+         "pt":"Continuar!",
+         "ru":"Так держать!",
+         "tr":"Devam et!",
+         "nl":"Ga zo door!",
+         "ja":"いい感じ！",
+         "pl":"Tak trzymac!",
+         "ar":"استمر!"
+      }
+   ],
+   "tutorial7":[  
+      {  
+         "en":"GREAT! You cleared the stack!\nNow i'll put some time on the clock.\nTry to clear all the cards!",
+         "es":"¡IMPRESIONANTE! Has eliminado el monton!\nAhora voy a darte solo unos segundos de reloj.\n¡A ver cuantas cartas puedes eliminar!",
+         "de":"FANTASTISCH! Sie haben den ganzen Stapel geschafft.\nSie bekommen einige Sekunden dazu.\nSchauen Sie, wie viele Karten Sie schaffen werden!",
+         "fr":"IMPRESSIONNANT ! Il n'y a plus de cartes sur la pile !\nJe vais rajouter des secondes sur le chronometre.\nRegardez combien de cartes vous pouvez jouer!",
+         "it":"FANTASTICO! Hai ripulito una pila!\nOra ti verra aggiunto qualche secondo al tempo residuo.\nScopri quante carte riesci ad utilizzare!",
+         "pt":"IMPRESSIONANTE! Limpou o monte!\nAgora porei alguns segundos no relogio.\nVeja quantas cartas consegue limpar!",
+         "ru":"ПОТРЯСАЮЩЕ! Ты очистил(а) стопку!\nСейчас я выставлю несколько секунд на часах.\nПосмотри, сколько карт ты сможешь убрать!",
+         "tr":"MUTHIS! Diziyi temizledin!\nSimdi sayaca birkac saniye ekliyorum.\nTemizleyebilecegin kac kart oldugunu gor!",
+         "nl":"GEWELDIG! Je hebt alle kaarten weggespeeld!\nNu zet ik wat seconden op de klok.\nKijk hoeveel kaarten je weg kunt spelen!",
+         "ja":"すごい！スタックを全部使ったね！\nもう少し時間をあげるから\nカードを全部使ってみてね！",
+         "pl":"SUPER! Udalo Ci sie wyczyscic karty!\nTeraz dodamy kilka sekund do odliczania.\nPrzekonaj sie, ile kart zdolasz wyczyscic!",
+         "ar":"عظيم! قمت بمسح كومة!\nالآن سأضع بعض الوقت على مدار الساعة.\nمحاولة لمسح جميع البطاقات!"
+      }
+   ],
+   "NoADS":[  
+      {  
+         "en":"No more videos for today!",
+         "es":"¡No hay mas videos para hoy!",
+         "de":"Keine weiteren Videos mehr fur heute!",
+         "fr":"Il n'y a plus de videos disponibles aujourd'hui!",
+         "it":"Nessun video per oggi!",
+         "pt":"Acabaram-se os videos por hoje!",
+         "ru":"На сегодня нет\nбольше видео!",
+         "tr":"Bugun baska video yok!",
+         "nl":"Geen video's meer vandaag!",
+         "ja":"今日の動画は終わったよ",
+         "pl":"Brak filmow na dzis!",
+         "ar":"لا توجد أي فيديوهات إضافية لهذا اليوم!"
+      }
+   ],
+   "NoCoins":[  
+      {  
+         "en":"Not enough coins!",
+         "es":"¡No hay suficientes monedas!",
+         "de":"Nicht genug Munzen!",
+         "fr":"Pas assez de pieces!",
+         "it":"Monete insufficienti!",
+         "pt":"Sem moedas suficientes!",
+         "ru":"Недостаточно монет!",
+         "tr":"Yeterli para yok!",
+         "nl":"Onvoldoende munten!",
+         "ja":"コインが足りないよ",
+         "pl":"Za malo monet!",
+         "ar":"ليس ما يكفي من النقود!"
+      }
+   ]
+}

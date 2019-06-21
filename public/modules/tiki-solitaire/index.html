@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>TiKi Solitaire</title>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, height=device-height, user-scalable=0, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="full-screen" content="yes">
+    <meta name="screen-orientation" content="landscape">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="360-fullscreen" content="true">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="description" content="Tiki Solitaire is a time based variant of the popular Solitaire card game.
+     In only 45 seconds you have to put as many cards as possible onto the piles.
+     Unlike the klondike version of the game, in Tiki Solitaire you are able to sort cards in ascending and descending order to the piles
+     and the color of the cards doesn&#x2019;t matter. The Tiki Solitaire game challenges you ability to make strategic decisions in a split second and of course your perception.
+     Do you have what it takes to reach the highscore?
+Play Tiki Solitaire now for free and enjoy this fast paced and action packed card game!">
+    <meta name="keywords" content="card, solitaire, solo">
+    <meta name="game-slug" content="tiki-solitaire">
+    <meta name="game-id" content="908">
+    <meta name="is-cocos-2d" content="true">
+    <meta name="supports-ad-play-button" content="true">
+    <!--<link rel="icon" type="image/GIF" href="icon.ico">-->
+    <!--<link rel="apple-touch-icon" href="icon_60x60.png">-->
+    <!--<link rel="apple-touch-icon" sizes="76x76" href="icon_76x76.png">-->
+    <!--<link rel="apple-touch-icon" sizes="120x120" href="icon_120x120.png">-->
+    <!--<link rel="apple-touch-icon" sizes="152x152" href="icon_152x152.png">-->
+    <script src="../common/common_v2.js"></script>
+
+    <style>
+        @font-face {
+            font-family: 'MyFont';
+            font-style: normal;
+            font-weight: 400;
+            src: url(res/Comfortaa-Bold.ttf) format('truetype');
+        }
+
+        @font-face {
+            font-family: 'MyFont2';
+            font-style: normal;
+            font-weight: 400;
+            src: url(res/RubikMonoOne-Regular.ttf) format('truetype');
+        }
+
+        html {
+            background-size: contain;
+        }
+
+        body,
+        canvas,
+        div {
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            -khtml-user-select: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        canvas {
+            display: block;
+        }
+
+        canvas {
+            position: fixed;
+            overflow: scroll;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        #orientation {
+            margin: 0 auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(res/orientation.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: rgb(0, 0, 0);
+            z-index: 999;
+            display: none;
+        }
+
+        #Cocos2dGameContainer #image {
+            height: auto;
+            width: auto;
+            max-width: 100%;
+            max-height: 100%;
+            margin: auto auto;
+            display: block;
+            position: absolute;
+            z-index: 100;
+            top: 0;
+        }
+
+        #imageclose {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            z-index: 100;
+            width: 8%;
+        }
+    </style>
+    <meta name="locale" content="en">
+</head>
+
+<body style="padding:0; margin: 0; background: #F3D467; background-size: contain; overflow: hidden;">
+
+<div id="orientation"></div>
+<canvas id="gameCanvas" width="1280" height="800"></canvas>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+    // window.gameLangs = ['en', 'de', 'es', 'fr', 'it', 'pt', 'ru', 'tr', 'pl', 'nl', 'ar', 'ja'];
+    // window.gameJS = ['softgames_game.js'];
+    // window.gameOnLoadScript = "StartGame();";
+</script>
+
+<script type="text/javascript" src="sg-sdk.5.6.6.js"></script>
+<script type="text/javascript" src="softgames_game.js"></script>
+<!--<script type="text/javascript" src="p2-module-manager-client.js"></script>-->
+</body>
+</html>
