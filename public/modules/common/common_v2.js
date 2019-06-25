@@ -1,11 +1,12 @@
 function initGTag(){
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){dataLayer.push(arguments);};
+    window.ga = console.log;
+	
     var e = document.createElement("script");
     e.async = 1;e.src = "https://www.googletagmanager.com/gtag/js?id=UA-101623151-11";
     var o = document.getElementsByTagName("script")[0];
     o.parentNode.insertBefore(e, o);
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = function(){dataLayer.push(arguments);};
-    window.ga = console.log;
     gtag('js', new Date());
     gtag('config', 'UA-101623151-11');
     gtag('event', 'screen_view');

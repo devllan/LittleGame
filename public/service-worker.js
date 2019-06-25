@@ -25,7 +25,7 @@ if (workbox) {
   console.log(`Boo! Workbox didn't load 😬`);
 }
 workbox.setConfig({ debug: true });
-workbox.googleAnalytics.initialize();
+//workbox.googleAnalytics.initialize();
 
 workbox.core.setCacheNameDetails({
   prefix: 'my-app',
