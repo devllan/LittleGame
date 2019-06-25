@@ -7,16 +7,12 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 
 gtag('config', 'UA-101623151-11');
-function ga(){
-    console.debug("ga", Array.prototype.slice.call(arguments).join(","));
-    /**
-     gtag('event', <action>, {
-              'event_category': <category>,
-              'event_label': <label>,
-              'value': <value>
-            });
-     */
-}
+
+window.ga = window.ga || function () {
+        (ga.q = ga.q || []).push(arguments)
+    };
+    ga.l = +new Date;
+	
 gtag('event', 'screen_view', {
     'app_name': 'WordConnect',
     'screen_name' : 'Home'
