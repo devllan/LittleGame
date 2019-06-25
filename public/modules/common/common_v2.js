@@ -9,7 +9,7 @@ function initGTag(){
     o.parentNode.insertBefore(e, o);
     gtag('js', new Date());
     gtag('config', 'UA-101623151-11');
-    gtag('event', 'screen_view');
+    //gtag('event', 'screen_view');
 
 }
 initGTag();
