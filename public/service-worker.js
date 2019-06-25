@@ -58,6 +58,11 @@ self.addEventListener('fetch', (evt) => {
 
 
 workbox.routing.registerRoute(
+  /modules\/common\/common_v2\.js/,
+  new workbox.strategies.StaleWhileRevalidate()
+);
+
+workbox.routing.registerRoute(
   new RegExp('.*\.js'),
   new workbox.strategies.CacheFirst({
 	networkTimeoutSeconds: 5,
