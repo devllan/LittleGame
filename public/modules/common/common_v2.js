@@ -1,7 +1,7 @@
 function initGTag(){
     window.dataLayer = window.dataLayer || [];
     window.gtag = function(){dataLayer.push(arguments);};
-    window.ga = console.log;
+    //window.ga = console.log;
 	
     var e = document.createElement("script");
     e.async = 1;e.src = "https://www.googletagmanager.com/gtag/js?id=UA-101623151-11";
