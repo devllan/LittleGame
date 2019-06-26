@@ -1,0 +1,1 @@
+function isMobile(){for(var n=navigator.userAgent,i=new Array("Android","iPhone","SymbianOS","Windows Phone","iPad","iPod","Windows CE","BlackBerry"),r=!1,e=0;e<i.length;e++)if(0<n.indexOf(i[e])){r=!0;break}return r}
