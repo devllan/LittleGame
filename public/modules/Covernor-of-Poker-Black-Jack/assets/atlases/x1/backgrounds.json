@@ -1,0 +1,52 @@
+{"frames": [
+
+{
+	"filename": "bg_menu",
+	"frame": {"x":1,"y":1,"w":960,"h":1280},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":960,"h":1280},
+	"sourceSize": {"w":960,"h":1280}
+},
+{
+	"filename": "board_decall",
+	"frame": {"x":963,"y":1799,"w":670,"h":212},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":670,"h":212},
+	"sourceSize": {"w":670,"h":212}
+},
+{
+	"filename": "upsell_panel_green",
+	"frame": {"x":963,"y":1,"w":960,"h":934},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":960,"h":934},
+	"sourceSize": {"w":960,"h":934}
+},
+{
+	"filename": "upsell_panel_yellow",
+	"frame": {"x":963,"y":937,"w":960,"h":860},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":960,"h":860},
+	"sourceSize": {"w":960,"h":860}
+},
+{
+	"filename": "upsell_wood",
+	"frame": {"x":1,"y":1283,"w":960,"h":747},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":960,"h":747},
+	"sourceSize": {"w":960,"h":747}
+}],
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "backgrounds.png",
+	"format": "RGBA8888",
+	"size": {"w":1924,"h":2031},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:2c56b55092be104f9db116062e6a2d50:02caae062a1b9ccb4fb9b49a8e6d292a:1836745ac32ecf968ba152c8ba5049a3$"
+}
+}
