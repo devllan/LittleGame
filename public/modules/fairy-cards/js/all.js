@@ -1,4 +1,4 @@
-window.indexedDB = null;
+// window.indexedDB = null;
 var Mock = {
     setItem: function(key, val, cb){
         localStorage[key] = val;
@@ -9148,7 +9148,8 @@ cr.plugins_ = {}, cr.behaviors = {}, "function" != typeof Object.getPrototypeOf 
         r = {}, o = {INDEXEDDB: "asyncStorage", LOCALSTORAGE: "localStorageWrapper", WEBSQL: "webSQLStorage"},
         a = "clear getItem iterate key keys length removeItem setItem".split(" "), c = {
             description: "",
-            driver: [o.INDEXEDDB, o.WEBSQL, o.LOCALSTORAGE].slice(),
+            //todo fix bug, change storage to sync
+            driver: [o.LOCALSTORAGE, o.INDEXEDDB, o.WEBSQL].slice(),
             name: "localforage",
             size: 4980736,
             storeName: "keyvaluepairs",
@@ -9225,11 +9226,11 @@ cr.plugins_ = {}, cr.behaviors = {}, "function" != typeof Object.getPrototypeOf 
             var o = a._getFirstSupportedDriver(t), c = Error("No available storage method found.");
             o ? (a._dbInfo = null, a._ready = null, i(o) ? new s(function (t) {
                 if (1 === h) require([o], t); else if (2 === h) switch (o) {
-                    case a.INDEXEDDB:
-                        t(require("./drivers/indexeddb"));
-                        break;
                     case a.LOCALSTORAGE:
                         t(require("./drivers/localstorage"));
+                        break;
+                    case a.INDEXEDDB:
+                        t(require("./drivers/indexeddb"));
                         break;
                     case a.WEBSQL:
                         t(require("./drivers/websql"))
