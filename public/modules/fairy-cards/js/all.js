@@ -9150,7 +9150,7 @@ cr.plugins_ = {}, cr.behaviors = {}, "function" != typeof Object.getPrototypeOf 
             description: "",
             //todo fix bug, change storage to sync
             driver: [o.LOCALSTORAGE, o.INDEXEDDB, o.WEBSQL].slice(),
-            name: "localforage",
+            name: "localforage/fairy-cards",
             size: 4980736,
             storeName: "keyvaluepairs",
             version: 1
