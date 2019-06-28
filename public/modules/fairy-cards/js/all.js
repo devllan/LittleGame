@@ -1,3 +1,17 @@
+window.indexedDB = null;
+var Mock = {
+    setItem: function(key, val, cb){
+        localStorage[key] = val;
+        cb(null, val);
+    },
+    getItem: function(key, cb){
+        if( key === 'start_page' ){
+            cb(null, 1);
+            return;
+        }
+        cb(null, localStorage[key]);
+    }
+}
 !function (e, t) {
     "object" == typeof module && "object" == typeof module.exports ? module.exports = e.document ? t(e, !0) : function (e) {
         if (!e.document) throw new Error("jQuery requires a window with a document");
@@ -3840,7 +3854,7 @@ cr.plugins_ = {}, cr.behaviors = {}, "function" != typeof Object.getPrototypeOf 
             this.saveToSlot = "", this.loadFromSlot = "", this.loadFromJson = ""
         }
         if (n.length) {
-            if (window.indexedDB && !this.isCocoonJs) h(n, function (e) {
+            if (false  && window.indexedDB && !this.isCocoonJs) h(n, function (e) {
                 e ? (t.loadFromJson = e, cr.logexport("Loaded state from IndexedDB storage (" + t.loadFromJson.length + " bytes)")) : (t.loadFromJson = localStorage.getItem("__c2save_" + n) || "", cr.logexport("Loaded state from WebStorage (" + t.loadFromJson.length + " bytes)")), t.suspendDrawing = !1, t.loadFromJson.length || t.trigger(cr.system_object.prototype.cnds.OnLoadFailed, null)
             }, function (e) {
                 t.loadFromJson = localStorage.getItem("__c2save_" + n) || "", cr.logexport("Loaded state from WebStorage (" + t.loadFromJson.length + " bytes)"), t.suspendDrawing = !1, t.loadFromJson.length || t.trigger(cr.system_object.prototype.cnds.OnLoadFailed, null)
@@ -8619,6 +8633,10 @@ cr.plugins_ = {}, cr.behaviors = {}, "function" != typeof Object.getPrototypeOf 
     }
 
     function a(t, e) {
+        // return g(new Promise(function(resolve, reject){
+        //     resolve(
+        //         Mock.getItem(t));
+        // }), e);
         var i = this;
         "string" != typeof t && (window.console.warn(t + " used as a key, but it is not a string."), t = String(t));
         var n = new y(function (e, n) {
@@ -8655,6 +8673,10 @@ cr.plugins_ = {}, cr.behaviors = {}, "function" != typeof Object.getPrototypeOf 
     }
 
     function h(t, e, i) {
+        // return g(new Promise(function(resolve, reject){
+        //     Mock.setItem(t, e);
+        //     resolve(e);
+        // }), i);
         var r = this;
         "string" != typeof t && (window.console.warn(t + " used as a key, but it is not a string."), t = String(t));
         var o = new y(function (i, o) {
@@ -9230,6 +9252,7 @@ cr.plugins_ = {}, cr.behaviors = {}, "function" != typeof Object.getPrototypeOf 
         return new n(t)
     };
     var d = new n;
+
     1 === h ? define("localforage", function () {
         return d
     }) : 2 === h ? module.exports = d : this.localforage = d
@@ -9316,14 +9339,32 @@ cr.plugins_ = {}, cr.behaviors = {}, "function" != typeof Object.getPrototypeOf 
         this.pendingSets++;
         var s = this;
         localforage.setItem(n, i, function (i, n) {
-            g = !0, s.pendingSets--, i ? (h = t(i), s.runtime.trigger(cr.plugins_.LocalStorage.prototype.cnds.OnError, s)) : (o = e, a = n, s.runtime.trigger(cr.plugins_.LocalStorage.prototype.cnds.OnAnyItemSet, s), s.runtime.trigger(cr.plugins_.LocalStorage.prototype.cnds.OnItemSet, s), o = "", a = ""), 0 === s.pendingSets && s.runtime.trigger(cr.plugins_.LocalStorage.prototype.cnds.OnAllSetsComplete, s)
+            g = !0, s.pendingSets--;
+            if( i ){(h = t(i), s.runtime.trigger(cr.plugins_.LocalStorage.prototype.cnds.OnError, s))}else{
+                o = e, a = n, s.runtime.trigger(cr.plugins_.LocalStorage.prototype.cnds.OnAnyItemSet, s)
+                s.runtime.trigger(cr.plugins_.LocalStorage.prototype.cnds.OnItemSet, s), o = "", a = ""}
+            0 === s.pendingSets && s.runtime.trigger(cr.plugins_.LocalStorage.prototype.cnds.OnAllSetsComplete, s)
         })
     }, s.prototype.GetItem = function (e) {
         var i = l + e;
+        if( i == "open_levels"){
+            //debugger;
+        }
         this.pendingGets++;
         var n = this;
+
         localforage.getItem(i, function (i, s) {
-            n.pendingGets--, i ? (h = t(i), n.runtime.trigger(cr.plugins_.LocalStorage.prototype.cnds.OnError, n)) : (o = e, a = s, "undefined" != typeof a && null !== a || (a = ""), n.runtime.trigger(cr.plugins_.LocalStorage.prototype.cnds.OnAnyItemGet, n), n.runtime.trigger(cr.plugins_.LocalStorage.prototype.cnds.OnItemGet, n), o = "", a = ""), 0 === n.pendingGets && n.runtime.trigger(cr.plugins_.LocalStorage.prototype.cnds.OnAllGetsComplete, n)
+            n.pendingGets--;
+            if( i ) {//has error
+                h = t(i), n.runtime.trigger(cr.plugins_.LocalStorage.prototype.cnds.OnError, n)
+            }else{
+                //e is key(open_levels), s is value(2)
+                o = e, a = s, "undefined" != typeof a && null !== a || (a = "");
+                n.runtime.trigger(cr.plugins_.LocalStorage.prototype.cnds.OnAnyItemGet, n);
+                n.runtime.trigger(cr.plugins_.LocalStorage.prototype.cnds.OnItemGet, n);
+            o = "", a = ""
+            }
+            0 === n.pendingGets && n.runtime.trigger(cr.plugins_.LocalStorage.prototype.cnds.OnAllGetsComplete, n)
         })
     }, s.prototype.CheckItemExists = function (e) {
         var i = l + e, n = this;
@@ -10304,5 +10345,6 @@ cr.plugins_ = {}, cr.behaviors = {}, "function" != typeof Object.getPrototypeOf 
         t.set_float(this.trigger_id)
     }, o.exps = new r
 }(), cr.getObjectRefTable = function () {
-    return [cr.plugins_.AJAX, cr.plugins_.Arr, cr.plugins_.Audio, cr.plugins_.Browser, cr.plugins_.Function, cr.plugins_.Dictionary, cr.plugins_.Famobi, cr.plugins_.LocalStorage, cr.plugins_.Sprite, cr.plugins_.Text, cr.plugins_.TiledBg, cr.plugins_.Touch, cr.system_object.prototype.cnds.OnLayoutStart, cr.plugins_.Arr.prototype.acts.SetSize, cr.plugins_.Dictionary.prototype.acts.AddKey, cr.system_object.prototype.exps.rgb, cr.plugins_.AJAX.prototype.acts.RequestFile, cr.system_object.prototype.cnds.For, cr.plugins_.Arr.prototype.acts.SetX, cr.system_object.prototype.exps.loopindex, cr.plugins_.AJAX.prototype.cnds.OnComplete, cr.system_object.prototype.exps.tokenat, cr.plugins_.AJAX.prototype.exps.LastData, cr.plugins_.Dictionary.prototype.cnds.ForEachKey, cr.plugins_.Dictionary.prototype.acts.SetKey, cr.plugins_.Dictionary.prototype.exps.CurrentKey, cr.plugins_.Famobi.prototype.exps.Translate, cr.plugins_.Arr.prototype.acts.SetXY, cr.plugins_.Arr.prototype.exps.At, cr.system_object.prototype.cnds.Compare, cr.system_object.prototype.acts.SetVar, cr.system_object.prototype.exps.floor, cr.plugins_.Arr.prototype.cnds.CompareXY, cr.system_object.prototype.cnds.IsGroupActive, cr.plugins_.LocalStorage.prototype.acts.CheckItemExists, cr.plugins_.LocalStorage.prototype.cnds.OnItemExists, cr.plugins_.LocalStorage.prototype.acts.GetItem, cr.plugins_.LocalStorage.prototype.cnds.OnItemGet, cr.plugins_.LocalStorage.prototype.exps.ItemValue, cr.plugins_.LocalStorage.prototype.cnds.OnItemMissing, cr.plugins_.LocalStorage.prototype.acts.SetItem, cr.plugins_.Arr.prototype.acts.JSONLoad, cr.plugins_.Arr.prototype.exps.AsJSON, cr.system_object.prototype.cnds.CompareVar, cr.plugins_.Audio.prototype.acts.Play, cr.plugins_.Audio.prototype.acts.SetPaused, cr.system_object.prototype.acts.Wait, cr.system_object.prototype.acts.GoToLayout, cr.system_object.prototype.cnds.Every, cr.plugins_.Arr.prototype.acts.Clear, cr.system_object.prototype.acts.AddVar, cr.system_object.prototype.cnds.Else, cr.system_object.prototype.acts.StopLoop, cr.plugins_.Browser.prototype.cnds.OnResize, cr.system_object.prototype.cnds.IsMobile, cr.plugins_.Browser.prototype.cnds.IsPortraitLandscape, cr.plugins_.Text.prototype.acts.SetWebFont, cr.plugins_.Text.prototype.acts.SetFontColor, cr.plugins_.Text.prototype.acts.SetFontSize, cr.plugins_.Text.prototype.acts.SetText, cr.plugins_.Dictionary.prototype.exps.Get, cr.system_object.prototype.acts.SetLayerVisible, cr.plugins_.Browser.prototype.cnds.OnPageHidden, cr.plugins_.Browser.prototype.cnds.OnPageVisible, cr.plugins_.Function.prototype.cnds.OnFunction, cr.plugins_.Function.prototype.exps.Param, cr.plugins_.Audio.prototype.acts.Stop, cr.plugins_.Function.prototype.cnds.CompareParam, cr.system_object.prototype.exps["int"], cr.plugins_.Sprite.prototype.acts.SetScale, cr.plugins_.Sprite.prototype.acts.SetVisible, cr.plugins_.Sprite.prototype.acts.SetInstanceVar, cr.system_object.prototype.acts.SubVar, cr.plugins_.Function.prototype.acts.CallFunction, cr.system_object.prototype.cnds.PickAll, cr.plugins_.Sprite.prototype.exps.Count, cr.plugins_.Sprite.prototype.acts.Destroy, cr.system_object.prototype.acts.CreateObject, cr.plugins_.Sprite.prototype.acts.MoveToTop, cr.system_object.prototype.acts.SetLayerOpacity, cr.plugins_.Text.prototype.cnds.CompareInstanceVar, cr.plugins_.Text.prototype.cnds.CompareOpacity, cr.plugins_.Text.prototype.acts.SetOpacity, cr.plugins_.Text.prototype.exps.Opacity, cr.plugins_.Text.prototype.acts.SetInstanceVar, cr.plugins_.Touch.prototype.cnds.OnTapGesture, cr.system_object.prototype.cnds.LayerCmpOpacity, cr.system_object.prototype.exps.layeropacity, cr.system_object.prototype.exps.dt, cr.system_object.prototype.exps.choose, cr.plugins_.Sprite.prototype.acts.SetWidth, cr.plugins_.Sprite.prototype.acts.SetHeight, cr.system_object.prototype.cnds.TriggerOnce, cr.plugins_.Sprite.prototype.acts.SetY, cr.plugins_.Sprite.prototype.cnds.CompareInstanceVar, cr.plugins_.Sprite.prototype.acts.SetAnimFrame, cr.plugins_.Sprite.prototype.cnds.CompareY, cr.plugins_.Sprite.prototype.exps.Y, cr.plugins_.Sprite.prototype.cnds.CompareWidth, cr.plugins_.Touch.prototype.cnds.OnTouchObject, cr.plugins_.Touch.prototype.cnds.OnTapGestureObject, cr.plugins_.Sprite.prototype.cnds.CompareFrame, cr.plugins_.Sprite.prototype.acts.SetAnimSpeed, cr.plugins_.Famobi.prototype.acts.MoreGamesLink, cr.plugins_.Sprite.prototype.cnds.OnCreated, cr.plugins_.Sprite.prototype.acts.LoadURL, cr.plugins_.Famobi.prototype.exps.GetMoreGamesButtonImage, cr.system_object.prototype.exps.newline, cr.plugins_.Sprite.prototype.exps.X, cr.plugins_.Arr.prototype.cnds.CompareX, cr.plugins_.Sprite.prototype.acts.SubInstanceVar, cr.plugins_.Sprite.prototype.acts.AddInstanceVar, cr.system_object.prototype.cnds.ForEach, cr.plugins_.Text.prototype.acts.SetVisible, cr.system_object.prototype.cnds.LayerVisible, cr.plugins_.Text.prototype.acts.SetY, cr.plugins_.Sprite.prototype.acts.SetPos, cr.system_object.prototype.exps.random, cr.plugins_.Text.prototype.acts.MoveToTop, cr.plugins_.Text.prototype.acts.SetPos, cr.plugins_.Sprite.prototype.exps.Width, cr.plugins_.Sprite.prototype.cnds.CompareX, cr.plugins_.Sprite.prototype.acts.SetOpacity, cr.plugins_.Sprite.prototype.exps.Opacity, cr.plugins_.Sprite.prototype.cnds.CompareOpacity, cr.plugins_.Sprite.prototype.acts.MoveToBottom, cr.plugins_.TiledBg.prototype.acts.SetWidth, cr.plugins_.Sprite.prototype.acts.ZMoveToObject, cr.system_object.prototype.acts.RestartLayout, cr.plugins_.Famobi.prototype.acts.SubmitHighscore, cr.plugins_.Famobi.prototype.acts.ShowAd, cr.plugins_.Famobi.prototype.acts.LevelUp, cr.plugins_.Sprite.prototype.exps.ImagePointX, cr.plugins_.Sprite.prototype.exps.ImagePointY, cr.plugins_.Famobi.prototype.acts.GameOver, cr.system_object.prototype.exps.loadingprogress, cr.plugins_.Text.prototype.cnds.CompareText, cr.system_object.prototype.cnds.EveryTick, cr.system_object.prototype.cnds.OnLoadFinished]
+    return [cr.plugins_.AJAX, cr.plugins_.Arr, cr.plugins_.Audio, cr.plugins_.Browser, cr.plugins_.Function, cr.plugins_.Dictionary, cr.plugins_.Famobi, cr.plugins_.LocalStorage, cr.plugins_.Sprite, cr.plugins_.Text, cr.plugins_.TiledBg, cr.plugins_.Touch, cr.system_object.prototype.cnds.OnLayoutStart, cr.plugins_.Arr.prototype.acts.SetSize, cr.plugins_.Dictionary.prototype.acts.AddKey, cr.system_object.prototype.exps.rgb, cr.plugins_.AJAX.prototype.acts.RequestFile, cr.system_object.prototype.cnds.For, cr.plugins_.Arr.prototype.acts.SetX, cr.system_object.prototype.exps.loopindex, cr.plugins_.AJAX.prototype.cnds.OnComplete, cr.system_object.prototype.exps.tokenat, cr.plugins_.AJAX.prototype.exps.LastData, cr.plugins_.Dictionary.prototype.cnds.ForEachKey, cr.plugins_.Dictionary.prototype.acts.SetKey, cr.plugins_.Dictionary.prototype.exps.CurrentKey, cr.plugins_.Famobi.prototype.exps.Translate, cr.plugins_.Arr.prototype.acts.SetXY, cr.plugins_.Arr.prototype.exps.At, cr.system_object.prototype.cnds.Compare, cr.system_object.prototype.acts.SetVar, cr.system_object.prototype.exps.floor, cr.plugins_.Arr.prototype.cnds.CompareXY, cr.system_object.prototype.cnds.IsGroupActive, cr.plugins_.LocalStorage.prototype.acts.CheckItemExists, cr.plugins_.LocalStorage.prototype.cnds.OnItemExists,
+        cr.plugins_.LocalStorage.prototype.acts.GetItem, cr.plugins_.LocalStorage.prototype.cnds.OnItemGet, cr.plugins_.LocalStorage.prototype.exps.ItemValue, cr.plugins_.LocalStorage.prototype.cnds.OnItemMissing, cr.plugins_.LocalStorage.prototype.acts.SetItem, cr.plugins_.Arr.prototype.acts.JSONLoad, cr.plugins_.Arr.prototype.exps.AsJSON, cr.system_object.prototype.cnds.CompareVar, cr.plugins_.Audio.prototype.acts.Play, cr.plugins_.Audio.prototype.acts.SetPaused, cr.system_object.prototype.acts.Wait, cr.system_object.prototype.acts.GoToLayout, cr.system_object.prototype.cnds.Every, cr.plugins_.Arr.prototype.acts.Clear, cr.system_object.prototype.acts.AddVar, cr.system_object.prototype.cnds.Else, cr.system_object.prototype.acts.StopLoop, cr.plugins_.Browser.prototype.cnds.OnResize, cr.system_object.prototype.cnds.IsMobile, cr.plugins_.Browser.prototype.cnds.IsPortraitLandscape, cr.plugins_.Text.prototype.acts.SetWebFont, cr.plugins_.Text.prototype.acts.SetFontColor, cr.plugins_.Text.prototype.acts.SetFontSize, cr.plugins_.Text.prototype.acts.SetText, cr.plugins_.Dictionary.prototype.exps.Get, cr.system_object.prototype.acts.SetLayerVisible, cr.plugins_.Browser.prototype.cnds.OnPageHidden, cr.plugins_.Browser.prototype.cnds.OnPageVisible, cr.plugins_.Function.prototype.cnds.OnFunction, cr.plugins_.Function.prototype.exps.Param, cr.plugins_.Audio.prototype.acts.Stop, cr.plugins_.Function.prototype.cnds.CompareParam, cr.system_object.prototype.exps["int"], cr.plugins_.Sprite.prototype.acts.SetScale, cr.plugins_.Sprite.prototype.acts.SetVisible, cr.plugins_.Sprite.prototype.acts.SetInstanceVar, cr.system_object.prototype.acts.SubVar, cr.plugins_.Function.prototype.acts.CallFunction, cr.system_object.prototype.cnds.PickAll, cr.plugins_.Sprite.prototype.exps.Count, cr.plugins_.Sprite.prototype.acts.Destroy, cr.system_object.prototype.acts.CreateObject, cr.plugins_.Sprite.prototype.acts.MoveToTop, cr.system_object.prototype.acts.SetLayerOpacity, cr.plugins_.Text.prototype.cnds.CompareInstanceVar, cr.plugins_.Text.prototype.cnds.CompareOpacity, cr.plugins_.Text.prototype.acts.SetOpacity, cr.plugins_.Text.prototype.exps.Opacity, cr.plugins_.Text.prototype.acts.SetInstanceVar, cr.plugins_.Touch.prototype.cnds.OnTapGesture, cr.system_object.prototype.cnds.LayerCmpOpacity, cr.system_object.prototype.exps.layeropacity, cr.system_object.prototype.exps.dt, cr.system_object.prototype.exps.choose, cr.plugins_.Sprite.prototype.acts.SetWidth, cr.plugins_.Sprite.prototype.acts.SetHeight, cr.system_object.prototype.cnds.TriggerOnce, cr.plugins_.Sprite.prototype.acts.SetY, cr.plugins_.Sprite.prototype.cnds.CompareInstanceVar, cr.plugins_.Sprite.prototype.acts.SetAnimFrame, cr.plugins_.Sprite.prototype.cnds.CompareY, cr.plugins_.Sprite.prototype.exps.Y, cr.plugins_.Sprite.prototype.cnds.CompareWidth, cr.plugins_.Touch.prototype.cnds.OnTouchObject, cr.plugins_.Touch.prototype.cnds.OnTapGestureObject, cr.plugins_.Sprite.prototype.cnds.CompareFrame, cr.plugins_.Sprite.prototype.acts.SetAnimSpeed, cr.plugins_.Famobi.prototype.acts.MoreGamesLink, cr.plugins_.Sprite.prototype.cnds.OnCreated, cr.plugins_.Sprite.prototype.acts.LoadURL, cr.plugins_.Famobi.prototype.exps.GetMoreGamesButtonImage, cr.system_object.prototype.exps.newline, cr.plugins_.Sprite.prototype.exps.X, cr.plugins_.Arr.prototype.cnds.CompareX, cr.plugins_.Sprite.prototype.acts.SubInstanceVar, cr.plugins_.Sprite.prototype.acts.AddInstanceVar, cr.system_object.prototype.cnds.ForEach, cr.plugins_.Text.prototype.acts.SetVisible, cr.system_object.prototype.cnds.LayerVisible, cr.plugins_.Text.prototype.acts.SetY, cr.plugins_.Sprite.prototype.acts.SetPos, cr.system_object.prototype.exps.random, cr.plugins_.Text.prototype.acts.MoveToTop, cr.plugins_.Text.prototype.acts.SetPos, cr.plugins_.Sprite.prototype.exps.Width, cr.plugins_.Sprite.prototype.cnds.CompareX, cr.plugins_.Sprite.prototype.acts.SetOpacity, cr.plugins_.Sprite.prototype.exps.Opacity, cr.plugins_.Sprite.prototype.cnds.CompareOpacity, cr.plugins_.Sprite.prototype.acts.MoveToBottom, cr.plugins_.TiledBg.prototype.acts.SetWidth, cr.plugins_.Sprite.prototype.acts.ZMoveToObject, cr.system_object.prototype.acts.RestartLayout, cr.plugins_.Famobi.prototype.acts.SubmitHighscore, cr.plugins_.Famobi.prototype.acts.ShowAd, cr.plugins_.Famobi.prototype.acts.LevelUp, cr.plugins_.Sprite.prototype.exps.ImagePointX, cr.plugins_.Sprite.prototype.exps.ImagePointY, cr.plugins_.Famobi.prototype.acts.GameOver, cr.system_object.prototype.exps.loadingprogress, cr.plugins_.Text.prototype.cnds.CompareText, cr.system_object.prototype.cnds.EveryTick, cr.system_object.prototype.cnds.OnLoadFinished]
 };
