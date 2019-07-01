@@ -14,6 +14,15 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
 
     <link rel="stylesheet" type="text/css" href="game.css">
+    <script type="text/javascript">
+        _innerWidth = window.innerWidth;
+        _innerHeight = window.innerHeight;
+        if( _innerWidth < _innerHeight ){
+            Object.defineProperty(window, 'innerHeight', {writable: true, configurable: true, value: _innerWidth/_innerHeight*_innerWidth});
+            Object.defineProperty(window, 'innerWidth', {writable: true, configurable: true, value: _innerWidth});
+            console.log(_innerWidth, _innerHeight, innerWidth, innerHeight);
+        }
+    </script>
     <script type="text/javascript" src="game.js"></script>
 	<script type="text/javascript" src="webaudio-context-patch.js"></script>
 
@@ -147,6 +156,8 @@
 
 
 <!-- END OF TEST -->
-
+<script>
+    document.getElementById("canvas").style.top = document.getElementById("play").style.top = ((_innerHeight - innerHeight)>>1) + "px";
+</script>
 </body>
 </html>
