@@ -1,0 +1,1 @@
+{ "publisher": "yandex", "game": "Mahjong", "version": "1.0", "enabled": true, "defaultSupportedLangs": [ "en" ], "defaultLang": "en", "games": [ { "targetUrl": "https://lagged.com/en/g/punch-man", "assets": [ { "type": "img", "uri": "punchman.gif" } ] } ] }

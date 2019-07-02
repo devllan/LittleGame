@@ -1,0 +1,16 @@
+{
+  "urls": [
+    "game/assets/sounds/sounds.mp3",
+    "game/assets/sounds/sounds.ogg"
+  ],
+  "sprite": {
+    "select": [
+      0,
+      292
+    ],
+    "starsplash": [
+      2000,
+      344
+    ]
+  }
+}
