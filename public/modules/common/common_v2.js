@@ -12,6 +12,9 @@ function initGTag(){
     //gtag('event', 'screen_view');
 
 }
+function initGameSdk(){
+    window.GameSdk = {};
+}
 initGTag();
 setInterval(function(){
     gtag('event', 'auto_engagement', {
