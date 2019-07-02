@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loading</title>
+    <script type="text/javascript" src="modules/common/common_v2.js"></script>
+</head>
+<body>
+<button onclick="closeWebview()" id="close-btn" disabled>Close</button>
+<script type="text/javascript">
+    function closeWebview(){
+
+    }
+    const RESOURCES = [
+        "modules/kitten-match/js/all.js",
+        "modules/tiki-solitaire/p2-module-manager-client.js",
+        "modules/solitaire-master/js/sm.js",
+        "modules/3-card-monte/game.js",
+        "modules/3-card-monte/media/audio/bgm.ogg",
+        "modules/3-card-monte/media/fonts/nue.woff",
+        "modules/3-card-monte/index.html"
+    ];
+
+    function load(){
+        let loadedCount = 0;
+        RESOURCES.forEach(url =>{
+            fetch(url).then(response=>{
+                loadedCount ++;
+                // console.log(response);
+                if( response.status !== 200 ){
+                    console.warn(response);
+                }
+
+                document.getElementById("close-btn").innerHTML = `${loadedCount}/${RESOURCES.length} ...`;
+
+                if( loadedCount === RESOURCES.length ){
+                    document.getElementById("close-btn").innerHTML = "Close";
+                    document.getElementById("close-btn").removeAttribute("disabled");
+                }
+            });
+        })
+    }
+
+    if( 'serviceWorker' in navigator ){
+        console.log("wait service");
+        navigator.serviceWorker.ready.then((reg)=>{
+            console.log("service is ready", reg);
+            setTimeout(load, 1);
+        })
+    }
+
+</script>
+</body>
+</html>

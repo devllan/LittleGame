@@ -12,6 +12,7 @@ function initGTag(){
     //gtag('event', 'screen_view');
 
 }
+
 initGTag();
 setInterval(function(){
     gtag('event', 'auto_engagement', {
@@ -28,3 +29,18 @@ if ('serviceWorker' in navigator) {
         console.log('ServiceWorker registration failed: ', err);
     });
 }
+
+LaggedAPI = (function(){
+    function empty(){
+        // fn({success: true});
+    }
+    return {
+        APIAds: {show: empty},
+        Achievements: {save: empty, show: empty},
+        Scores: {save: empty, show: empty},
+        init: function(a, b){
+            //start game
+            console.log(a, b);
+        }
+    }
+}());
