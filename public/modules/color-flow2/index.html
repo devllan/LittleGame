@@ -11,6 +11,7 @@
 <meta name="HandheldFriendly" content="true" />
 
 <meta name="mobile-web-app-capable" content="yes" />
+ <script type="text/javascript" src="../common/common_v2.js"></script>
 <style type="text/css">
 * {
 padding: 0;
@@ -79,22 +80,9 @@ alert("Exported games won't work until you upload them. (When running on the fil
 <script src="c2runtime.js"></script>
 
 <script>
- LaggedAPI = (function(){
-  function empty(){
-   // fn({success: true});
-  }
-  return {
-   APIAds: {show: empty},
-   Achievements: {save: empty, show: empty},
-   Scores: {save: empty, show: empty},
-   init: function(a, b){
-    console.log(a, b);
-   }
-  }
- }());
 // Start the Construct 2 project running on window load.
 jQuery(document).ready(function ()
-{			
+{
 // Create new runtime using the c2canvas
 cr_createRuntime("c2canvas");
 });
