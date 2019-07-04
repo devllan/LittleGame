@@ -4440,8 +4440,8 @@ fg_api.prototype.gamePaused = function() {
 };
 
 fg_api.prototype.gameResumed = function() {
+    console.log('hiiii')
     var self = this;
-
     self.log("Received gameResumed signal");
 };
 

@@ -8141,6 +8141,7 @@ cr.plugins_ = {}, cr.behaviors = {}, "function" != typeof Object.getPrototypeOf 
             console.debug(i)
         }
     }, e.prototype.GetMoreGamesButtonImage = function () {
+        GameAPI.trackLoadComplete();
         try {
             return window.famobi.getMoreGamesButtonImage()
         } catch (t) {
@@ -8153,6 +8154,7 @@ cr.plugins_ = {}, cr.behaviors = {}, "function" != typeof Object.getPrototypeOf 
             console.debug(t)
         }
     }, e.prototype.ShowAd = function () {
+        GameAPI.trackLevelStart();
         try {
             window.famobi.showAd()
         } catch (t) {
