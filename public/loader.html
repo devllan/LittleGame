@@ -36,6 +36,9 @@
                 if( loadedCount === RESOURCES.length ){
                     document.getElementById("close-btn").innerHTML = "Close";
                     document.getElementById("close-btn").removeAttribute("disabled");
+					if( window.PRELOADWEBVIEW && window.PRELOADWEBVIEW.close ){
+						PRELOADWEBVIEW.close()
+					}
                 }
             });
         })
