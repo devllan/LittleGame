@@ -32,11 +32,15 @@ var sdkHandler = {
     },
     trigger: function(eventName, data, context){
         console.log("trigger " + eventName);
+        if(eventName == 'loading.completed'){
+            GameAPI.trackLoadComplete();
+        }
         if( this._pool[eventName] ){
             this._pool[eventName].forEach(function(handler){
                 handler.call(context, data);
-            });
-        }else{
+            })
+        }
+        else{
             console.log("trigger no handler");
         }
 

@@ -303,7 +303,7 @@
      */
     play: function(sprite, callback) {
       var self = this;
-
+      // console.log('gamestart')
       // if no sprite was passed but a callback was, update the variables
       if (typeof sprite === 'function') {
         callback = sprite;
@@ -866,7 +866,6 @@
     _inactiveNode: function(callback) {
       var self = this,
         node = null;
-
       // find first inactive node to recycle
       for (var i=0; i<self._audioNode.length; i++) {
         if (self._audioNode[i].paused && self._audioNode[i].readyState === 4) {

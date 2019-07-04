@@ -8292,6 +8292,7 @@ ig.module("game.entities.opening-kitty").requires("impact.entity").defines(funct
             this.parent(b, c, d)
         },
         ready: function () {
+            GameAPI.trackLevelStart();
             if (!ig.wm) if (_SETTINGS.DeveloperBranding.Splash.Enabled) {
                 this.initTimer = new ig.Timer(0.1);
                 try {
@@ -9488,6 +9489,7 @@ ig.module("game.main").requires("impact.game", "plugins.patches.webkit-image-smo
                     ig.domHandler.show(el);
                 } else {
                     console.log('MarketJSGameCenter settings not defined in game settings')
+                    GameAPI.trackLoadComplete()
                 }
             }
         },

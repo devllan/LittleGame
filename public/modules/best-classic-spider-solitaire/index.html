@@ -110,7 +110,12 @@ Play Best Classic Spider Solitaire now for free and enjoy this card game masterp
                 this._pool[eventName].forEach(function(handler){
                     handler.call(context, data);
                 })
-            }else{
+            }else if(eventName == 'gameStart'){
+                GameAPI.trackLevelStart();
+            }else if(eventName == 'loading.completed'){
+                GameAPI.trackLoadComplete();
+            }
+            else{
                 console.log("trigger no handler");
             }
         }

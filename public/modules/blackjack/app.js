@@ -1811,6 +1811,7 @@ function initBetting() {
     if(allowSound) {
     }
     playSound("chipIntro");
+    GameAPI.trackLevelStart();
     userInput.addHitArea("quitGameBetting", butEventHandler, null, {
         type: "rect",
         aRect: [
