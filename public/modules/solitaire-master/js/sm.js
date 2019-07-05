@@ -8440,6 +8440,7 @@
             return this.visualBounds.height > this.visualBounds.width ? d : e
         }, visualBounds: new c.Rectangle, layoutBounds: new c.Rectangle, documentBounds: new c.Rectangle
     },c.Device.whenReady(function (a) {
+        GameAPI.trackLoadComplete();
         var b = window && "pageXOffset" in window ? function () {
             return window.pageXOffset
         } : function () {
@@ -9921,9 +9922,6 @@
             if (this.updateProgress(), this._processingHead >= this._fileList.length) this.finishedLoading(); else if (!this._flightQueue.length) {
                 console.warn("Phaser.Loader - aborting: processing queue empty, loading may have stalled");
                 var f = this;
-                setTimeout(function () {
-                    f.finishedLoading(!0)
-                }, 2e3)
             }
         }, finishedLoading: function (a) {
             this.hasLoaded || (this.hasLoaded = !0, this.isLoading = !1, a || this._fileLoadStarted || (this._fileLoadStarted = !0, this.onLoadStart.dispatch()), this.onLoadComplete.dispatch(), this.reset(), this.game.state.loadComplete())

@@ -28,6 +28,12 @@ var sdkHandler = {
         }
     },
     trigger: function(eventName, data, context){
+        if(eventName == 'loading.completed'){
+            GameAPI.trackLoadComplete();
+        }else if(eventName == 'levelStart'){
+            GameAPI.trackLevelStart();
+        }
+
         console.log("trigger " + eventName);
         if( this._pool[eventName] ){
             this._pool[eventName].forEach(function(handler){

@@ -83,7 +83,19 @@
     // Start the Construct 2 project running on window load.
     jQuery(document).ready(function () {
 // Create new runtime using the c2canvas
-        cr_createRuntime("c2canvas");
+        var cr = cr_createRuntime("c2canvas");
+    cr.trigger = GameAPI.before(cr.trigger, function(a,b,c){
+        if( c && c !== "ishorizontalmatch" && c !== "isverticalmatch" ){
+            console.log(c);
+        }
+        switch(c ){
+            case "set z-order":
+				console.log('down')
+                GameAPI.trackLoadComplete();
+				console.log('start')
+                GameAPI.trackLevelStart(); break;
+        }
+    });
     });
 
     // Pause and resume on page becoming visible/invisible

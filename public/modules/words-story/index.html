@@ -80,7 +80,17 @@ alert("Exported games won't work until you upload them. (When running on the fil
 jQuery(document).ready(function ()
 {
 // Create new runtime using the c2canvas
-cr_createRuntime("c2canvas");
+var cr = cr_createRuntime("c2canvas");
+    cr.trigger = GameAPI.before(cr.trigger, function(a,b,c){
+        if( c && c !== "ishorizontalmatch" && c !== "isverticalmatch" ){
+            console.log(c);
+        }
+        switch(c ){  
+            case "creat":
+                GameAPI.trackLoadComplete(); 
+                GameAPI.trackLevelStart(); break;
+        }
+    });
 });
 
 // Pause and resume on page becoming visible/invisible
@@ -98,8 +108,7 @@ document.addEventListener("msvisibilitychange", onVisibilityChanged, false);
 
 </script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-101623151-11"></script>
-<script src="../common/common.js"></script>
+<script src="../common/common_v2.js"></script>
 
 </body>
 </html>

@@ -377,6 +377,7 @@ var LoadState = {
             game.load.start()
     },
     shutdown: function() {
+        GameAPI.trackLoadComplete();
         this.loadText = null,
             this.logo = null,
             this.loading = null,
@@ -535,6 +536,7 @@ var HomeState = {
             }, this)
     },
     onPlayButton: function() {
+        GameAPI.trackLevelStart();
         this.buttonPlay.inputEnabled = !1,
             this.buttonStat.inputEnabled = !1,
             R.sceneTransition(200, "play")
